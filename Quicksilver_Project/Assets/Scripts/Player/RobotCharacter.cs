@@ -195,9 +195,10 @@ public class RobotCharacter: MonoBehaviour
 	void CheckGroundStatus()
 	{
 		// Create layer mask to ignore certain objects in scene
-		int layerMask = (1 << 9) + (1 << 10) + (1 << 11) + (1 << 12) + (1 << 2);
+		int layerMask = (1 << 8) + (1 << 9) + (1 << 10) + (1 << 11) + (1 << 12) + (1 << 2);
 		layerMask = ~layerMask;
 		RaycastHit hitInfo;
+		float sphereRadiusScale = (normalSizedState == true) ? 1f : targetShrinkScale;
 
 		#if UNITY_EDITOR
 		// Helper function to visualise the ground check ray in the scene view
@@ -205,7 +206,19 @@ public class RobotCharacter: MonoBehaviour
 		#endif
 
 		// Casts a ray down to check ground status
-		if (Physics.Raycast(transform.position + (Vector3.up * 0.1f), Vector3.down, out hitInfo, groundCheckDistance, layerMask))
+//		if (Physics.Raycast(transform.position + (Vector3.up * 0.1f), Vector3.down, out hitInfo, groundCheckDistance, layerMask))
+//		{
+//			groundNormal = hitInfo.normal;
+//			isGrounded = true;
+//			anim.applyRootMotion = true;
+//		}
+//		else
+//		{
+//			isGrounded = false;
+//			groundNormal = Vector3.up;
+//			anim.applyRootMotion = false;
+//		}
+		if (Physics.SphereCast(transform.position + (Vector3.up * 0.6f), 0.3f, Vector3.down, out hitInfo, groundCheckDistance + 0.6f, layerMask))
 		{
 			groundNormal = hitInfo.normal;
 			isGrounded = true;
@@ -217,6 +230,7 @@ public class RobotCharacter: MonoBehaviour
 			groundNormal = Vector3.up;
 			anim.applyRootMotion = false;
 		}
+
 	}
 
 	void ApplyExtraTurnRotation()
@@ -235,14 +249,7 @@ public class RobotCharacter: MonoBehaviour
 		// Check whether conditions are right to allow a jump:
 		if (jump && !crouch && currentBaseState.IsName("Grounded"))
 		{
-			if (Physics.Raycast(transform.position, transform.forward, col.radius + 0.1f, layerMask))
-			{
-				rig.velocity = new Vector3(0, jumpPower, 0);
-			}
-			else
-			{
-				rig.velocity = new Vector3(rig.velocity.x, jumpPower, rig.velocity.z);
-			}
+			rig.velocity = new Vector3(0, jumpPower, 0);
 			isGrounded = false;
 			anim.applyRootMotion = false;
 			groundCheckDistance = 0.1f;
@@ -285,10 +292,14 @@ public class RobotCharacter: MonoBehaviour
 			Vector3 extraGravityForce = (Physics.gravity * gravityMultiplier) - Physics.gravity;
 			rig.AddForce(extraGravityForce);
 
-			// After reaching peak of jump, allow character to alter falling path
+			 //After reaching peak of jump, allow character to alter falling path
 			if (forwardAmount > 0)
 			{
-				rig.velocity = rig.velocity + transform.forward * 0.1f;
+				rig.velocity = new Vector3(0, rig.velocity.y, 0) + transform.forward.normalized * 1f;
+			}
+			else
+			{
+				rig.velocity = new Vector3(0, rig.velocity.y, 0);
 			}
 			isAirDashing = false;
 		}
