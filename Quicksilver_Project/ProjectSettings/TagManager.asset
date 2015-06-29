@@ -8,6 +8,7 @@ TagManager:
   - Floor
   - Spikes
   - SF_Door
+  - Platform
   layers:
   - Default
   - TransparentFX
@@ -24,10 +25,10 @@ TagManager:
   - IgnoreFallCast
   - Floor
   - OuterWall
-  - Platforms
-  - 
-  - 
-  - 
+  - HighPlatforms
+  - LowPlatforms
+  - UnreachablePlatforms
+  - Objects
   - 
   - 
   - 
