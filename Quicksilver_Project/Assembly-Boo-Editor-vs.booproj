@@ -61,7 +61,7 @@
      <None Include="Assets\RAIN\Editor\Shaders\VisualSensorRingShader.shader" />
      <None Include="Assets\TileTool\Simple Rename Tool\SimpleRenameTool - Readme.txt" />
      <None Include="Assets\RAIN\ReleaseNotes.txt" />
-     <None Include="Assets\SciFi_Door\readme.txt" />
+     <None Include="Assets\Imported Assets\SciFi_Door\readme.txt" />
      <None Include="Assets\RAIN\Editor\Shaders\AspectRingShader.shader" />
      <None Include="Assets\RAIN\Editor\Shaders\NavMeshColliderShader.shader" />
  <Reference Include="Assembly-UnityScript">

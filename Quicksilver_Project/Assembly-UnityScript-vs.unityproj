@@ -50,7 +50,7 @@
      <Compile Include="Assets\Imported Assets\FX Mega Pack 2\Scripts\ParticleSpawner.js" />
      <Compile Include="Assets\Imported Assets\FX Mega Pack 2\Scripts\RandomRotate.js" />
      <Compile Include="Assets\Imported Assets\FX Mega Pack 2\Scripts\RotateY.js" />
-     <Compile Include="Assets\SciFi_Door\Script\door.js" />
+     <Compile Include="Assets\Imported Assets\SciFi_Door\Script\door.js" />
      <Compile Include="Assets\TileTool\Scripts\TileStyles.js" />
      <Compile Include="Assets\TileTool\Scripts\TileToolGroup.js" />
      <Compile Include="Assets\TileTool\Scripts\TileToolStyle.js" />
@@ -69,7 +69,7 @@
      <None Include="Assets\RAIN\Editor\Shaders\VisualSensorRingShader.shader" />
      <None Include="Assets\TileTool\Simple Rename Tool\SimpleRenameTool - Readme.txt" />
      <None Include="Assets\RAIN\ReleaseNotes.txt" />
-     <None Include="Assets\SciFi_Door\readme.txt" />
+     <None Include="Assets\Imported Assets\SciFi_Door\readme.txt" />
      <None Include="Assets\RAIN\Editor\Shaders\AspectRingShader.shader" />
      <None Include="Assets\RAIN\Editor\Shaders\NavMeshColliderShader.shader" />
  <Reference Include="UnityEngine.UI">

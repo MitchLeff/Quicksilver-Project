@@ -58,6 +58,8 @@
      <Compile Include="Assets\Scripts\Player\RobotParticleManager.cs" />
      <Compile Include="Assets\Scripts\Player\RobotRagdoll.cs" />
      <Compile Include="Assets\Scripts\Player\RobotUserControl.cs" />
+     <Compile Include="Assets\Warrior Pack Bundle 1 Free\Code\SmoothFollow.cs" />
+     <Compile Include="Assets\Warrior Pack Bundle 1 Free\Code\WarriorAnimationDemo.cs" />
      <None Include="Assets\RAIN\Editor\Shaders\AspectSphereShader.shader" />
      <None Include="Assets\Imported Assets\FX Mega Pack 2\FX Mega Pack 2 - Readme.txt" />
      <None Include="Assets\RAIN\Editor\Shaders\VisualSensorLineShader.shader" />
@@ -71,7 +73,7 @@
      <None Include="Assets\RAIN\Editor\Shaders\VisualSensorRingShader.shader" />
      <None Include="Assets\TileTool\Simple Rename Tool\SimpleRenameTool - Readme.txt" />
      <None Include="Assets\RAIN\ReleaseNotes.txt" />
-     <None Include="Assets\SciFi_Door\readme.txt" />
+     <None Include="Assets\Imported Assets\SciFi_Door\readme.txt" />
      <None Include="Assets\RAIN\Editor\Shaders\AspectRingShader.shader" />
      <None Include="Assets\RAIN\Editor\Shaders\NavMeshColliderShader.shader" />
  <Reference Include="UnityEngine.UI">
