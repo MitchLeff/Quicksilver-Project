@@ -48,15 +48,10 @@ MonoBehaviour:
       debugbreak=&quot;False&quot; /&gt;&lt;expression weight=&quot;&quot; returnvalue=&quot;success&quot;
       repeatuntil=&quot;&quot; name=&quot;location = navigationtarget(&amp;quot;Navigation3&amp;quot;)&quot;
       expression=&quot;location = navigationtarget(&amp;quot;Navigation3&amp;quot;)&quot;
-      debugbreak=&quot;False&quot; /&gt;&lt;/random&gt;&lt;waypointpath waypointsetvariable=&quot;&amp;quot;MeleeEnemy_WaypointNetwork&amp;quot;&quot;
-      waypointactiontype=&quot;path&quot; traversetype=&quot;pingpong&quot; traverseorder=&quot;forward&quot;
-      repeatuntil=&quot;&quot; priority=&quot;&quot; pathtargetvariable=&quot;location&quot;
-      name=&quot;waypointpath&quot; movetargetvariable=&quot;varpath&quot; debugbreak=&quot;False&quot;&gt;&lt;parallel
-      tiebreaker=&quot;fail&quot; succeed=&quot;any&quot; repeatuntil=&quot;&quot;
-      name=&quot;parallel&quot; fail=&quot;any&quot; debugbreak=&quot;False&quot;&gt;&lt;move
-      turnspeed=&quot;&quot; repeatuntil=&quot;&quot; name=&quot;move&quot; movetarget=&quot;varpath&quot;
+      debugbreak=&quot;False&quot; /&gt;&lt;/random&gt;&lt;move turnspeed=&quot;&quot;
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;move&quot; movetarget=&quot;location&quot;
       movespeed=&quot;.5&quot; facetarget=&quot;&quot; debugbreak=&quot;False&quot;
-      closeenoughdistance=&quot;&quot; closeenoughangle=&quot;&quot; /&gt;&lt;/parallel&gt;&lt;/waypointpath&gt;&lt;/sequencer&gt;&lt;/constraint&gt;&lt;constraint
+      closeenoughdistance=&quot;&quot; closeenoughangle=&quot;&quot; /&gt;&lt;/sequencer&gt;&lt;/constraint&gt;&lt;constraint
       repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;player in sight&quot;
       debugbreak=&quot;False&quot; constraint=&quot;PlayerTargetDetected != null&quot;&gt;&lt;sequencer
       usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; name=&quot;Chase and
