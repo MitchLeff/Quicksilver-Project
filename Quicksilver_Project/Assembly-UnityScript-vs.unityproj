@@ -82,10 +82,10 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="RAIN">
- <HintPath>C:/Users/Rahmaan/Desktop/CS6457_CS4455_Quicksilver_Project/Quicksilver_Project/Assets/RAIN/RAIN.dll</HintPath>
+ <HintPath>C:/Users/Larry/Desktop/CS4455/CS6457_CS4455_Quicksilver_Project/Quicksilver_Project/Assets/RAIN/RAIN.dll</HintPath>
  </Reference>
  <Reference Include="RAINMetaform">
- <HintPath>C:/Users/Rahmaan/Desktop/CS6457_CS4455_Quicksilver_Project/Quicksilver_Project/Assets/RAIN/RAINMetaform.dll</HintPath>
+ <HintPath>C:/Users/Larry/Desktop/CS4455/CS6457_CS4455_Quicksilver_Project/Quicksilver_Project/Assets/RAIN/RAINMetaform.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
