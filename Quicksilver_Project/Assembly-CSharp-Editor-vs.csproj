@@ -66,7 +66,7 @@
      <None Include="Assets\RAIN\Editor\Shaders\AspectRingShader.shader" />
      <None Include="Assets\RAIN\Editor\Shaders\NavMeshColliderShader.shader" />
  <Reference Include="Assembly-UnityScript">
- <HintPath>C:/Users/Larry/Desktop/CS4455/CS6457_CS4455_Quicksilver_Project/Quicksilver_Project/Library/ScriptAssemblies/Assembly-UnityScript.dll</HintPath>
+ <HintPath>C:/Users/Rahmaan/Desktop/CS6457_CS4455_Quicksilver_Project/Quicksilver_Project/Library/ScriptAssemblies/Assembly-UnityScript.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
@@ -84,16 +84,16 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="RAIN">
- <HintPath>C:/Users/Larry/Desktop/CS4455/CS6457_CS4455_Quicksilver_Project/Quicksilver_Project/Assets/RAIN/RAIN.dll</HintPath>
+ <HintPath>C:/Users/Rahmaan/Desktop/CS6457_CS4455_Quicksilver_Project/Quicksilver_Project/Assets/RAIN/RAIN.dll</HintPath>
  </Reference>
  <Reference Include="RAINMetaform">
- <HintPath>C:/Users/Larry/Desktop/CS4455/CS6457_CS4455_Quicksilver_Project/Quicksilver_Project/Assets/RAIN/RAINMetaform.dll</HintPath>
+ <HintPath>C:/Users/Rahmaan/Desktop/CS6457_CS4455_Quicksilver_Project/Quicksilver_Project/Assets/RAIN/RAINMetaform.dll</HintPath>
  </Reference>
  <Reference Include="RAINEditor">
- <HintPath>C:/Users/Larry/Desktop/CS4455/CS6457_CS4455_Quicksilver_Project/Quicksilver_Project/Assets/RAIN/Editor/RAINEditor.dll</HintPath>
+ <HintPath>C:/Users/Rahmaan/Desktop/CS6457_CS4455_Quicksilver_Project/Quicksilver_Project/Assets/RAIN/Editor/RAINEditor.dll</HintPath>
  </Reference>
  <Reference Include="RAINMetaformEditor">
- <HintPath>C:/Users/Larry/Desktop/CS4455/CS6457_CS4455_Quicksilver_Project/Quicksilver_Project/Assets/RAIN/Editor/RAINMetaformEditor.dll</HintPath>
+ <HintPath>C:/Users/Rahmaan/Desktop/CS6457_CS4455_Quicksilver_Project/Quicksilver_Project/Assets/RAIN/Editor/RAINMetaformEditor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
