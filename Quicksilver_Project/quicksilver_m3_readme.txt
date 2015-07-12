@@ -45,10 +45,10 @@ RAIN AI OPTION WAS CHOSEN
 
         
 ## Larry He ##
-- Regen Enemy AI:  This is an average sized enemy who utilizes melee combat to attack the player.  This enemy also regenerates after death.  He will die and live during certain time intervals.  If he detects the player, he will chase him down and attack him.
+- Regen Enemy AI:  This is an average sized enemy who utilizes melee combat to attack the player.  This enemy also regenerates after death. (i.e. He trips sometimes and gets back up.)  If he detects the player, he will chase him down and attack him.
 - (COMPLETE) Navigation:  The Regen utilizes a Waypoint Network Rig and Navigation Targets to determine his patrol.
 - (COMPLETE) Senses:  The Regen utilizes two Visual Sensors (one for detecting the player and for determining if the player is in attack range)
-- (COMPLETE) Animation States:  The Regen has a Movement, Idle, and Attack animation state
+- (COMPLETE) Animation States:  The Regen has a Movement, Idle, two Attacks, and Death animation state
 
 ## Mitch Leff ##
 - Ranged Enemy AI:  This is an avergage sized enemy who utilizes ranged combat to attack the player.  This enemy is restricted to movements on the high platforms.  This AI will have long vision and attack range.  When attacking, the AI will use a Custom RAIN AI element to lead its shot depending on how the player moves.  
@@ -97,9 +97,7 @@ None besides Group Resources
 
 
 ##### Resources Used by Larry ##### 
-- Asset: 
-- URL: 
-- Usage: 
+None besides Group Resources
 
 ##### Resources Used by Mitch ##### 
 - Asset: 
