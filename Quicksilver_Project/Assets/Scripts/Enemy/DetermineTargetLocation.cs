@@ -11,6 +11,7 @@ public class DetermineTargetLocation : RAINAction
 	public override void Start (AI ai)
 	{
 		enemyShoot = ai.Body.GetComponent<EnemyShooting>();
+		playerTarget = ai.WorkingMemory.GetItem<GameObject>("PlayerTargetDetected");
 	}
 
 
