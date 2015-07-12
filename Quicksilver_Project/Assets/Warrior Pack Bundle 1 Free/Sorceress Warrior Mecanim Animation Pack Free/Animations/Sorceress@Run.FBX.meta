@@ -139,7 +139,11 @@ ModelImporter:
     optimizeGameObjects: 0
     motionNodeName: 
     animationImportErrors: 
-    animationImportWarnings: 
+    animationImportWarnings: "MuscleClip 'Sorceress@Run' conversion warning: Bone
+      length is different in avatar and animation\n\n     'B_L_Thigh' : position error
+      = 32.518177 mm\n\n     'B_R_Thigh' : position error = 32.518166 mm\n\nMuscleClip
+      'Sorceress@Run'conversion warning: 'Motion/B_Pelvis/B_Spine' has translation
+      animation. It is not supported.\n\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     animationCompression: 0
@@ -163,7 +167,7 @@ ModelImporter:
       loopBlend: 1
       loopBlendOrientation: 1
       loopBlendPositionY: 1
-      loopBlendPositionXZ: 0
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 1
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 1
