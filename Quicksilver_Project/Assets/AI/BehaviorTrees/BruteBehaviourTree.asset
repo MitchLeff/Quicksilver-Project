@@ -28,27 +28,53 @@ MonoBehaviour:
       Player In Sight?&quot; debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;&quot;
       priority=&quot;&quot; name=&quot;player not in sight&quot; debugbreak=&quot;False&quot;
       constraint=&quot;PlayerTargetDetected == null &amp;amp;&amp;amp; PlayerTargetInRange
-      == null&quot;&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;any&quot;
-      repeatuntil=&quot;&quot; name=&quot;patrol&quot; fail=&quot;all&quot; debugbreak=&quot;False&quot;&gt;&lt;waypointpatrol
-      waypointsetvariable=&quot;LargeEnemy_WaypointRoute&quot; waypointactiontype=&quot;patrol&quot;
-      traversetype=&quot;pingpong&quot; traverseorder=&quot;forward&quot; repeatuntil=&quot;&quot;
-      pathtargetvariable=&quot;&quot; name=&quot;waypointpatrol&quot; movetargetvariable=&quot;patrolPoint&quot;
-      debugbreak=&quot;False&quot;&gt;&lt;move turnspeed=&quot;&quot; repeatuntil=&quot;&quot;
-      name=&quot;move to waypoint&quot; movetarget=&quot;patrolPoint&quot; movespeed=&quot;0.5&quot;
-      facetarget=&quot;&quot; debugbreak=&quot;False&quot; closeenoughdistance=&quot;&quot;
-      closeenoughangle=&quot;&quot; /&gt;&lt;/waypointpatrol&gt;&lt;/parallel&gt;&lt;/constraint&gt;&lt;constraint
+      == null&quot;&gt;&lt;selector usepriorities=&quot;False&quot; repeatuntil=&quot;&quot;
+      name=&quot;was player recently seen&quot; debugbreak=&quot;False&quot;&gt;&lt;constraint
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;PlayerLastPosition
+      != (0, 0, 0)&quot; debugbreak=&quot;False&quot; constraint=&quot;PlayerLastPosition
+      != (0, 0, 0)&quot;&gt;&lt;selector usepriorities=&quot;True&quot; repeatuntil=&quot;&quot;
+      name=&quot;If Move possible go to last player location&quot; debugbreak=&quot;False&quot;&gt;&lt;sequencer
+      usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; priority=&quot;1&quot;
+      name=&quot;go to last player location&quot; debugbreak=&quot;False&quot;&gt;&lt;move
+      turnspeed=&quot;&quot; repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;move&quot;
+      movetarget=&quot;PlayerLastPosition&quot; movespeed=&quot;0.5&quot; facetarget=&quot;PlayerLastPosition&quot;
+      debugbreak=&quot;False&quot; closeenoughdistance=&quot;1&quot; closeenoughangle=&quot;30&quot;
+      /&gt;&lt;timer waitforsec=&quot;3&quot; returnvalue=&quot;success&quot; priority=&quot;&quot;
+      name=&quot;timer&quot; debugbreak=&quot;False&quot; /&gt;&lt;expression returnvalue=&quot;success&quot;
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;PlayerLastPosition
+      = (0, 0, 0)&quot; expression=&quot;PlayerLastPosition = (0, 0, 0)&quot; debugbreak=&quot;False&quot;
+      /&gt;&lt;/sequencer&gt;&lt;sequencer usepriorities=&quot;False&quot; repeatuntil=&quot;&quot;
+      priority=&quot;0.5&quot; name=&quot;wait for player&quot; debugbreak=&quot;False&quot;&gt;&lt;timer
+      waitforsec=&quot;3&quot; returnvalue=&quot;success&quot; priority=&quot;&quot;
+      name=&quot;timer&quot; debugbreak=&quot;False&quot; /&gt;&lt;expression returnvalue=&quot;success&quot;
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;PlayerLastPosition
+      = (0, 0, 0)&quot; expression=&quot;PlayerLastPosition = (0, 0, 0)&quot; debugbreak=&quot;False&quot;
+      /&gt;&lt;/sequencer&gt;&lt;/selector&gt;&lt;/constraint&gt;&lt;constraint repeatuntil=&quot;&quot;
+      priority=&quot;&quot; name=&quot;PlayerLastPosition == (0, 0, 0)&quot; debugbreak=&quot;False&quot;
+      constraint=&quot;PlayerLastPosition == (0, 0, 0)&quot;&gt;&lt;parallel tiebreaker=&quot;fail&quot;
+      succeed=&quot;any&quot; repeatuntil=&quot;&quot; name=&quot;patrol&quot; fail=&quot;all&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;waypointpatrol waypointsetvariable=&quot;LargeEnemy_WaypointRoute&quot;
+      waypointactiontype=&quot;patrol&quot; traversetype=&quot;pingpong&quot; traverseorder=&quot;forward&quot;
+      repeatuntil=&quot;&quot; pathtargetvariable=&quot;&quot; name=&quot;waypointpatrol&quot;
+      movetargetvariable=&quot;patrolPoint&quot; debugbreak=&quot;False&quot;&gt;&lt;move
+      turnspeed=&quot;&quot; repeatuntil=&quot;&quot; name=&quot;move to waypoint&quot;
+      movetarget=&quot;patrolPoint&quot; movespeed=&quot;0.5&quot; facetarget=&quot;&quot;
+      debugbreak=&quot;False&quot; closeenoughdistance=&quot;&quot; closeenoughangle=&quot;&quot;
+      /&gt;&lt;/waypointpatrol&gt;&lt;/parallel&gt;&lt;/constraint&gt;&lt;/selector&gt;&lt;/constraint&gt;&lt;constraint
       repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;player in sight&quot;
-      debugbreak=&quot;False&quot; constraint=&quot;PlayerTargetDetected != null&quot;&gt;&lt;sequencer
-      usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; name=&quot;Chase and
-      attack&quot; debugbreak=&quot;False&quot;&gt;&lt;expression returnvalue=&quot;evaluate&quot;
-      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;Is Target in sight
-      but not in range?&quot; expression=&quot;PlayerTargetDetected != null&quot;
-      debugbreak=&quot;False&quot; /&gt;&lt;move turnspeed=&quot;360&quot; repeatuntil=&quot;&quot;
-      priority=&quot;&quot; name=&quot;Run towards target&quot; movetarget=&quot;PlayerTargetDetected&quot;
-      movespeed=&quot;0.75&quot; facetarget=&quot;PlayerTargetDetected&quot; debugbreak=&quot;False&quot;
-      closeenoughdistance=&quot;5&quot; closeenoughangle=&quot;&quot; /&gt;&lt;expression
+      debugbreak=&quot;False&quot; constraint=&quot;PlayerTargetDetected != null&quot;&gt;&lt;expression
+      returnvalue=&quot;success&quot; repeatuntil=&quot;&quot; name=&quot;Determine
+      last seen location of player&quot; expression=&quot;PlayerLastPosition = position(PlayerTargetDetected)&quot;
+      debugbreak=&quot;False&quot; /&gt;&lt;sequencer usepriorities=&quot;False&quot;
+      repeatuntil=&quot;&quot; name=&quot;Chase and attack&quot; debugbreak=&quot;False&quot;&gt;&lt;expression
       returnvalue=&quot;evaluate&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
-      name=&quot;Is Target in attack range?&quot; expression=&quot;PlayerTargetInRange
+      name=&quot;Is Target in sight but not in range?&quot; expression=&quot;PlayerTargetDetected
+      != null&quot; debugbreak=&quot;False&quot; /&gt;&lt;move turnspeed=&quot;360&quot;
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;Run towards target&quot;
+      movetarget=&quot;PlayerTargetDetected&quot; movespeed=&quot;0.75&quot; facetarget=&quot;PlayerTargetDetected&quot;
+      debugbreak=&quot;False&quot; closeenoughdistance=&quot;5&quot; closeenoughangle=&quot;&quot;
+      /&gt;&lt;expression returnvalue=&quot;evaluate&quot; repeatuntil=&quot;&quot;
+      priority=&quot;&quot; name=&quot;Is Target in attack range?&quot; expression=&quot;PlayerTargetInRange
       != null&quot; debugbreak=&quot;False&quot; /&gt;&lt;move turnspeed=&quot;360&quot;
       repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;Turn to face target&quot;
       movetarget=&quot;&quot; movespeed=&quot;&quot; facetarget=&quot;PlayerTargetInRange&quot;
