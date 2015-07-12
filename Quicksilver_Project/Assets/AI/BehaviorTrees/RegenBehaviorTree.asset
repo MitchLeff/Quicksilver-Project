@@ -38,9 +38,9 @@ MonoBehaviour:
       == null &amp;amp;&amp;amp; PlayerTargetInRange == null&quot;&gt;&lt;sequencer
       usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; name=&quot;root&quot;
       debugbreak=&quot;False&quot;&gt;&lt;random repeatuntil=&quot;&quot; priority=&quot;&quot;
-      name=&quot;random&quot; debugbreak=&quot;False&quot;&gt;&lt;expression weight=&quot;1&quot;
-      returnvalue=&quot;success&quot; repeatuntil=&quot;&quot; name=&quot;location
-      = navigationtarget(&amp;quot;Regen1&amp;quot;)&quot; expression=&quot;location
+      name=&quot;randomlocation&quot; debugbreak=&quot;False&quot;&gt;&lt;expression
+      weight=&quot;1&quot; returnvalue=&quot;success&quot; repeatuntil=&quot;&quot;
+      name=&quot;location = navigationtarget(&amp;quot;Regen1&amp;quot;)&quot; expression=&quot;location
       = navigationtarget(&amp;quot;Regen1&amp;quot;)&quot; debugbreak=&quot;False&quot;
       /&gt;&lt;expression weight=&quot;1&quot; returnvalue=&quot;success&quot; repeatuntil=&quot;&quot;
       name=&quot;location = navigationtarget(&amp;quot;Regen2&amp;quot;)&quot; expression=&quot;location
@@ -54,6 +54,14 @@ MonoBehaviour:
       /&gt;&lt;expression weight=&quot;1&quot; returnvalue=&quot;success&quot; repeatuntil=&quot;&quot;
       name=&quot;location = navigationtarget(&amp;quot;Regen5&amp;quot;)&quot; expression=&quot;location
       = navigationtarget(&amp;quot;Regen5&amp;quot;)&quot; debugbreak=&quot;False&quot;
+      /&gt;&lt;/random&gt;&lt;random repeatuntil=&quot;&quot; priority=&quot;&quot;
+      name=&quot;randomspeed&quot; debugbreak=&quot;False&quot;&gt;&lt;expression
+      weight=&quot;&quot; returnvalue=&quot;evaluate&quot; repeatuntil=&quot;&quot;
+      name=&quot;expression&quot; expression=&quot;speed = .1&quot; debugbreak=&quot;False&quot;
+      /&gt;&lt;expression weight=&quot;&quot; returnvalue=&quot;evaluate&quot; repeatuntil=&quot;&quot;
+      name=&quot;expression&quot; expression=&quot;speed = 1&quot; debugbreak=&quot;False&quot;
+      /&gt;&lt;expression weight=&quot;&quot; returnvalue=&quot;evaluate&quot; repeatuntil=&quot;&quot;
+      name=&quot;expression&quot; expression=&quot;speed = 4&quot; debugbreak=&quot;False&quot;
       /&gt;&lt;/random&gt;&lt;waypointpath waypointsetvariable=&quot;&amp;quot;RegenEnemy_WaypointNetwork&amp;quot;&quot;
       waypointactiontype=&quot;path&quot; traversetype=&quot;pingpong&quot; traverseorder=&quot;forward&quot;
       repeatuntil=&quot;&quot; priority=&quot;&quot; pathtargetvariable=&quot;location&quot;
@@ -61,7 +69,7 @@ MonoBehaviour:
       tiebreaker=&quot;fail&quot; succeed=&quot;any&quot; repeatuntil=&quot;&quot;
       name=&quot;parallel&quot; fail=&quot;any&quot; debugbreak=&quot;False&quot;&gt;&lt;move
       turnspeed=&quot;&quot; repeatuntil=&quot;&quot; name=&quot;move&quot; movetarget=&quot;varpath&quot;
-      movespeed=&quot;.5&quot; facetarget=&quot;&quot; debugbreak=&quot;False&quot;
+      movespeed=&quot;speed&quot; facetarget=&quot;&quot; debugbreak=&quot;False&quot;
       closeenoughdistance=&quot;&quot; closeenoughangle=&quot;&quot; /&gt;&lt;/parallel&gt;&lt;/waypointpath&gt;&lt;/sequencer&gt;&lt;/constraint&gt;&lt;constraint
       repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;player in sight&quot;
       debugbreak=&quot;False&quot; constraint=&quot;PlayerTargetDetected != null&quot;&gt;&lt;sequencer
