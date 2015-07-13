@@ -1,4 +1,11 @@
-﻿using RAIN.Action;
+﻿// Team Quicksilver
+// Rahmaan Lodhia
+// William Gu
+// Larry He
+// Mitch Leff
+
+
+using RAIN.Action;
 using RAIN.Core;
 using UnityEngine;
 
@@ -17,7 +24,7 @@ public class DetermineTargetLocation : RAINAction
 
 	public override ActionResult Execute(AI ai)
 	{
-		enemyShoot.targetPosition = playerTarget.transform.position + playerTarget.GetComponent<Rigidbody>().velocity;
+		enemyShoot.targetPosition = playerTarget.transform.position + playerTarget.GetComponent<Rigidbody>().velocity*0.2f;
 		return ActionResult.SUCCESS;
 	}
 }
