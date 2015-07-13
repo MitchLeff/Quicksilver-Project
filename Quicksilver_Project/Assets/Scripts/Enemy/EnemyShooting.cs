@@ -36,7 +36,7 @@ public class EnemyShooting : MonoBehaviour
 	void Shoot ()
 	{
 		attackLine.enabled = true;
-		attackLine.SetPosition (0, transform.position + new Vector3(0f, 2f, 0f));
+		attackLine.SetPosition (0, transform.position + new Vector3(0f, 2.5f, 0f));
 		attackLine.SetPosition (1, targetPosition);
 	}
 }
