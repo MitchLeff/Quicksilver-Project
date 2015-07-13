@@ -17,7 +17,7 @@ public class DetermineTargetLocation : RAINAction
 
 	public override ActionResult Execute(AI ai)
 	{
-
+		enemyShoot.targetPosition = playerTarget.transform.position + playerTarget.GetComponent<Rigidbody>().velocity;
 		return ActionResult.SUCCESS;
 	}
 }

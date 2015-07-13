@@ -56,6 +56,8 @@
      <Compile Include="Assets\TileTool\Scripts\TileToolStyle.js" />
      <Compile Include="Assets\TileTool\Scripts\TileToolTile.js" />
      <Compile Include="Assets\TileTool\Simple Mesh Combine\Scripts\SimpleMeshCombine.js" />
+     <Compile Include="Assets\VolumeLight\Scripts\UVScroller.js" />
+     <Compile Include="Assets\VolumeLight\Scripts\VLMouseOrbit.js" />
      <None Include="Assets\RAIN\Editor\Shaders\AspectSphereShader.shader" />
      <None Include="Assets\Imported Assets\FX Mega Pack 2\FX Mega Pack 2 - Readme.txt" />
      <None Include="Assets\RAIN\Editor\Shaders\VisualSensorLineShader.shader" />
@@ -64,6 +66,7 @@
      <None Include="Assets\RAIN\Editor\Shaders\NavMeshContourShader.shader" />
      <None Include="Assets\RAIN\Editor\Shaders\WaypointShader.shader" />
      <None Include="Assets\TileTool\Simple Mesh Combine\Scripts\C#\- IMPORTANT - Version Change Readme.txt" />
+     <None Include="Assets\VolumeLight\Read Me\Read Me.txt" />
      <None Include="Assets\RAIN\Editor\ScriptTemplates\BehaviorTreeTemplate.xml" />
      <None Include="Assets\Imported Assets\FX Mega Pack 2\Shaders\Mobile Vertex Color Cull Off.shader" />
      <None Include="Assets\RAIN\Editor\Shaders\VisualSensorRingShader.shader" />
@@ -72,6 +75,7 @@
      <None Include="Assets\Imported Assets\SciFi_Door\readme.txt" />
      <None Include="Assets\RAIN\Editor\Shaders\AspectRingShader.shader" />
      <None Include="Assets\RAIN\Editor\Shaders\NavMeshColliderShader.shader" />
+     <None Include="Assets\VolumeLight\Shader\AdditiveMask.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
