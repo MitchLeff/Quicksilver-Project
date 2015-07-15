@@ -154,10 +154,9 @@ public class RobotParticleManager : MonoBehaviour
 	public void ActivateEnergyBulletEffect()
 	{
 		ParticleSystem ps = energyBulletPS.GetComponent<ParticleSystem>();
-		ps.simulationSpace = ParticleSystemSimulationSpace.Local;
 		ps.Clear();
+		ps.Simulate(0.0001f, true, true);
 		ps.Play();
-		ps.simulationSpace = ParticleSystemSimulationSpace.World;
 	}
 
 }
