@@ -3370,7 +3370,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!114 &276161356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7476,7 +7476,7 @@ TextMesh:
   m_Font: {fileID: 12800000, guid: 5f13dee69bea42a4098b459231233577, type: 3}
   m_Color:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4278234879
 --- !u!23 &576270625
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12562,7 +12562,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!1001 &895963437
 Prefab:
   m_ObjectHideFlags: 0
@@ -16650,7 +16650,7 @@ TextMesh:
   m_Font: {fileID: 12800000, guid: 5f13dee69bea42a4098b459231233577, type: 3}
   m_Color:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4278234879
 --- !u!23 &1141520645
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20861,7 +20861,6 @@ GameObject:
   - 23: {fileID: 1380504818}
   - 65: {fileID: 1380504817}
   - 135: {fileID: 1380504816}
-  - 114: {fileID: 1380504815}
   m_Layer: 18
   m_Name: base
   m_TagString: Untagged
@@ -20881,18 +20880,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1827732165}
   m_RootOrder: 0
---- !u!114 &1380504815
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: cfef738579cd02c40b3b1d63e67b0f84,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1380504813}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32864ba0a3390e7458e89a14c805d8ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!135 &1380504816
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -22994,7 +22981,7 @@ TextMesh:
   m_Font: {fileID: 12800000, guid: 5f13dee69bea42a4098b459231233577, type: 3}
   m_Color:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4278234879
 --- !u!23 &1514554570
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -31864,7 +31851,7 @@ TextMesh:
   m_Font: {fileID: 12800000, guid: 5f13dee69bea42a4098b459231233577, type: 3}
   m_Color:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4278234879
 --- !u!23 &2056766884
 MeshRenderer:
   m_ObjectHideFlags: 0

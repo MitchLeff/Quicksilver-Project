@@ -2,5 +2,8 @@
 
 
 function OnTriggerEnter (obj : Collider) {
-	Application.LoadLevel("quicksilver_m4");
+	var thedoor = gameObject.FindWithTag("New Game");
+	thedoor.GetComponent.<Animation>().Play("open");
+	yield WaitForSeconds(2);
+	Application.LoadLevel("test1");
 }
