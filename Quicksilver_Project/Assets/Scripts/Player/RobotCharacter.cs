@@ -110,7 +110,7 @@ public class RobotCharacter: MonoBehaviour
 		}
 	}
 
-	public void Move(Vector3 move, bool crouch, bool jump, bool dash, bool guard, bool attack, bool sizeChange)
+	public void Move(Vector3 move, bool crouch, bool jump, bool dash, bool guard, bool attack, bool shoot, bool sizeChange)
 	{
 		// Convert move vector to a direction and turn amount
 		if (move.magnitude > 1f) move.Normalize();
@@ -143,9 +143,16 @@ public class RobotCharacter: MonoBehaviour
 		if (!currentBaseState.IsName("Dash"))
 		{
 			ApplyExtraTurnRotation();
-			if(!currentBaseState.IsName("Crouching") && attack)
+			if(!currentBaseState.IsName("Crouching"))
 			{
-				anim.SetBool("Attack", true);
+				if (attack)
+				{
+					anim.SetBool("Attack", true);
+				}
+				else if (shoot)
+				{
+					anim.SetBool("Shoot", true);
+				}
 			}
 
 			// Determine if guarding is allowed
@@ -405,10 +412,17 @@ public class RobotCharacter: MonoBehaviour
 			anim.SetBool("Attack",false);
 		}
 
+		if (currentAttackState.IsName("Shoot"))
+		{
+			anim.SetBool("Shoot",false);
+		}
+
+
 		// Update state transition parameters
 		anim.SetBool("Crouch", isCrouching);
 		anim.SetBool("OnGround", isGrounded);
 		anim.SetBool ("Guard", isGuarding);
+
 		if (!isGrounded && !isAirDashing)
 		{
 			anim.SetFloat("Jump", rig.velocity.y);

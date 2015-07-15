@@ -17,6 +17,7 @@ public class RobotParticleManager : MonoBehaviour
 	private GameObject landingSmokePS;
 	private GameObject wallCrashPS;
 	private GameObject sizeChangePS;
+	private GameObject energyBulletPS;
 
 	private RobotCharacter character; 
 	private Animator anim;
@@ -37,6 +38,7 @@ public class RobotParticleManager : MonoBehaviour
 		landingSmokePS = GameObject.Find ("LandingSmokePS");
 		wallCrashPS = GameObject.Find ("WallCrashPS");
 		sizeChangePS = GameObject.Find ("SizeChangeAuraPS");
+		energyBulletPS = GameObject.Find ("EnergyBulletPS");
 
 	}
 	
@@ -148,4 +150,15 @@ public class RobotParticleManager : MonoBehaviour
 			wallCrashPS.GetComponent<AudioSource>().Play();
 		}
 	}
+
+	public void ActivateEnergyBulletEffect()
+	{
+		ParticleSystem ps = energyBulletPS.GetComponent<ParticleSystem>();
+		
+		if (!ps.isPlaying)
+		{
+			ps.Play();
+		}
+	}
+
 }

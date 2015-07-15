@@ -26,6 +26,7 @@ public class RobotUserControl : MonoBehaviour
 	private bool dash;
 	private bool crouch;
 	private bool attack;
+	private bool shoot;
 	private bool guard;
 	private bool sizeChange;
 	private bool leftTriggerReleased;
@@ -77,6 +78,11 @@ public class RobotUserControl : MonoBehaviour
 		if (Input.GetButtonDown("Attack"))
 		{
 			attack = true;
+		}
+
+		if (Input.GetButtonDown ("Shoot"))
+		{
+			shoot = true;
 		}
 
 		if (Input.GetButtonDown("SizeChange"))
@@ -161,12 +167,13 @@ public class RobotUserControl : MonoBehaviour
         // Pass all parameters to the character control script as long ragdoll is not active
 		if (!ragdoll.isRagdollActive)
 		{
-        	character.Move(move, crouch, jump, dash, guard, attack, sizeChange);
+        	character.Move(move, crouch, jump, dash, guard, attack, shoot, sizeChange);
 		}
 		// Reset all input booleans, so that the action is ready to be performed again
         jump = false;
 		dash = false;
 		sizeChange = false;
 		attack = false;
+		shoot = false;
     }
 }
