@@ -7,8 +7,11 @@ TagManager:
   - Wall
   - Floor
   - Spikes
-  - SF_Door
   - Platform
+  - Credits
+  - Exit
+  - New Game
+  - Level Select
   layers:
   - Default
   - TransparentFX
