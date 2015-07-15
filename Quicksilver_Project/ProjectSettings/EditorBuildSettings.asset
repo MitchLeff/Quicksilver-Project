@@ -9,3 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/prototype.unity
   - enabled: 1
     path: Assets/Scenes/quicksilver_m3.unity
+  - enabled: 1
+    path: Assets/Scenes/quicksilver_title.unity
+  - enabled: 1
+    path: Assets/Scenes/quicksilver_m4.unity

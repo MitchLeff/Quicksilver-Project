@@ -32085,7 +32085,9 @@ GameObject:
   - 33: {fileID: 2074357669}
   - 23: {fileID: 2074357668}
   - 65: {fileID: 2074357667}
+  - 65: {fileID: 2074357671}
   - 111: {fileID: 2074357666}
+  - 114: {fileID: 2074357670}
   m_Layer: 18
   m_Name: door
   m_TagString: New Game
@@ -32169,6 +32171,29 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2074357664}
   m_Mesh: {fileID: 4300004, guid: 65fb86f734ce568408b3eaad4fca1b60, type: 3}
+--- !u!114 &2074357670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2074357664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 058512848498fa54e925c0cccd6217bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &2074357671
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2074357664}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.88257313, y: 1.79999995, z: 4.93993568}
+  m_Center: {x: -3.10049261e-14, y: -3.77594461e-06, z: 2.46996784}
 --- !u!1001 &2074988811
 Prefab:
   m_ObjectHideFlags: 0
