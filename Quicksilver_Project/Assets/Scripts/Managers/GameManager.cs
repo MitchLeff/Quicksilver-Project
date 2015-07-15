@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.EventSystems;
 
 
 public class GameManager : MonoBehaviour 
@@ -12,7 +13,7 @@ public class GameManager : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
-		Cursor.lockState = CursorLockMode.Locked;
+		Cursor.lockState = CursorLockMode.Confined;
 		Cursor.visible = false;
 	}
 	
@@ -52,7 +53,7 @@ public class GameManager : MonoBehaviour
 	public void ResumeGame ()
 	{
 		Time.timeScale = 1;
-		Cursor.lockState = CursorLockMode.Locked;
+		Cursor.lockState = CursorLockMode.Confined;
 		Cursor.visible = false;
 		gamePaused = false;
 	}
@@ -60,6 +61,7 @@ public class GameManager : MonoBehaviour
 	public void OpenPauseMenu ()
 	{
 		pauseMenuPanel.SetActive (true);
+		EventSystem.current.SetSelectedGameObject(GameObject.Find ("Resume"));
 	}
 
 	public void ClosePauseMenu ()
