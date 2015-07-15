@@ -51,13 +51,9 @@
      <Compile Include="Assets\Imported Assets\FX Mega Pack 2\Scripts\RandomRotate.js" />
      <Compile Include="Assets\Imported Assets\FX Mega Pack 2\Scripts\RotateY.js" />
      <Compile Include="Assets\Imported Assets\SciFi_Door\Script\door.js" />
-     <Compile Include="Assets\Scripts\LevelSpecific\main menu\credits.js" />
      <Compile Include="Assets\Scripts\LevelSpecific\main menu\creditsactivate.js" />
-     <Compile Include="Assets\Scripts\LevelSpecific\main menu\exit.js" />
      <Compile Include="Assets\Scripts\LevelSpecific\main menu\exitactivate.js" />
-     <Compile Include="Assets\Scripts\LevelSpecific\main menu\levelselect.js" />
      <Compile Include="Assets\Scripts\LevelSpecific\main menu\levelselectactivate.js" />
-     <Compile Include="Assets\Scripts\LevelSpecific\main menu\newgame.js" />
      <Compile Include="Assets\Scripts\LevelSpecific\main menu\newgameactivate.js" />
      <Compile Include="Assets\TileTool\Scripts\TileStyles.js" />
      <Compile Include="Assets\TileTool\Scripts\TileToolGroup.js" />
