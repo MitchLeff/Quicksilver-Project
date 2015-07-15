@@ -4,9 +4,6 @@
 function OnTriggerEnter (obj : Collider) {
 	var thedoor = gameObject.FindWithTag("Exit");
 	thedoor.GetComponent.<Animation>().Play("open");
-}
-
-function OnTriggerExit (obj : Collider) {
-	var thedoor = gameObject.FindWithTag("Exit");
-	thedoor.GetComponent.<Animation>().Play("close");
+	yield WaitForSeconds(2);
+	Application.Quit();
 }
