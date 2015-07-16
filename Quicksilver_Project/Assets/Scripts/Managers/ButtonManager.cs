@@ -4,7 +4,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 
-public class ButtonManager : MonoBehaviour, IPointerEnterHandler, ISelectHandler, IDeselectHandler, IUpdateSelectedHandler
+public class ButtonManager : MonoBehaviour, IPointerEnterHandler, IDeselectHandler
 {
 	private Animator anim;
 
@@ -25,20 +25,9 @@ public class ButtonManager : MonoBehaviour, IPointerEnterHandler, ISelectHandler
 	{
 		EventSystem.current.SetSelectedGameObject(this.gameObject);
 	}
-
-	public void OnUpdateSelected (BaseEventData eventData)
-	{
-//		if (EventSystem.current.currentSelectedGameObject != this.gameObject && anim.enabled && !anim.GetCurrentAnimatorStateInfo(0).IsName("Normal"))
-//			anim.SetTrigger("Normal");
-	}
-
+	
 	public void OnDeselect (BaseEventData eventData)
 	{
 		anim.SetTrigger("Normal");
 	}	
-
-	public void OnSelect (BaseEventData eventData)
-	{
-		anim.SetTrigger("Highlighted");
-	}
 }
