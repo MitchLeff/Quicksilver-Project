@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 {
 
 	public GameObject pauseMenuPanel;
+	public GameObject resultsScreen;
 	
 	private bool gamePaused = false;
 
@@ -71,18 +72,24 @@ public class GameManager : MonoBehaviour
 
 	public void ReturnToMainMenu ()
 	{
-		EventSystem.current.SetSelectedGameObject(GameObject.Find ("ExitToMainMenu"));
+		//EventSystem.current.SetSelectedGameObject(GameObject.Find ("ExitToMainMenu"));
 		ResumeGame ();
 		StartCoroutine(ChangeLevel(0));
 	}
 
 	public void RestartLevel ()
 	{
-		EventSystem.current.SetSelectedGameObject(GameObject.Find ("Restart"));
+		//EventSystem.current.SetSelectedGameObject(GameObject.Find ("Restart"));
 		ResumeGame ();
 		StartCoroutine(ChangeLevel(1));
 	}
 
+	public void OpenSuccessScreen ()
+	{
+		resultsScreen.SetActive (true);
+		PauseGame();
+		EventSystem.current.SetSelectedGameObject(GameObject.Find ("Results_Restart"));
+	}
 
 	public IEnumerator ChangeLevel (int index)
 	{

@@ -59,6 +59,7 @@
      <Compile Include="Assets\Scripts\Managers\Fading.cs" />
      <Compile Include="Assets\Scripts\Managers\FootstepAudioManager.cs" />
      <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
+     <Compile Include="Assets\Scripts\Managers\LevelExitManager.cs" />
      <Compile Include="Assets\Scripts\Managers\SceneSwitchManager.cs" />
      <Compile Include="Assets\Scripts\Player\RobotCharacter.cs" />
      <Compile Include="Assets\Scripts\Player\RobotColliderManager.cs" />
