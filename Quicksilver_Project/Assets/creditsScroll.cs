@@ -11,7 +11,7 @@ public class creditsScroll : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
-		rt = GetComponent<RectTransform> ();
+		rt = GameObject.Find ("Credits").GetComponent<RectTransform>();
 		gm = GameObject.Find ("GameManager");
 	}
 	
