@@ -68,4 +68,12 @@ public class GameManager : MonoBehaviour
 	{
 		pauseMenuPanel.SetActive (false);
 	}
+
+	public IEnumerator ChangeLevel (int index)
+	{
+		Debug.Log("fading");
+		float fadetime = this.GetComponent<Fading>().BeginFade(1);
+		yield return new WaitForSeconds(fadetime);
+		Application.LoadLevel(index);
+	}
 }

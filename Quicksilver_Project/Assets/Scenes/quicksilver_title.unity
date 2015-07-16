@@ -6212,6 +6212,48 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: e1cd84792cb8f274cbb62478b3297a5a, type: 2}
   m_PrefabInternal: {fileID: 465238438}
+--- !u!1001 &467425608
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 452292, guid: 0bfe9938c80cb4f43bd7e38b8a5d517f, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 452292, guid: 0bfe9938c80cb4f43bd7e38b8a5d517f, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 452292, guid: 0bfe9938c80cb4f43bd7e38b8a5d517f, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 452292, guid: 0bfe9938c80cb4f43bd7e38b8a5d517f, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 452292, guid: 0bfe9938c80cb4f43bd7e38b8a5d517f, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 452292, guid: 0bfe9938c80cb4f43bd7e38b8a5d517f, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 452292, guid: 0bfe9938c80cb4f43bd7e38b8a5d517f, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 452292, guid: 0bfe9938c80cb4f43bd7e38b8a5d517f, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 0bfe9938c80cb4f43bd7e38b8a5d517f, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &470898549
 GameObject:
   m_ObjectHideFlags: 0
@@ -32418,9 +32460,9 @@ GameObject:
   - 65: {fileID: 2074357667}
   - 65: {fileID: 2074357671}
   - 111: {fileID: 2074357666}
-  - 114: {fileID: 2074357670}
   - 33: {fileID: 2074357669}
   - 222: {fileID: 2074357672}
+  - 114: {fileID: 2074357670}
   m_Layer: 18
   m_Name: door
   m_TagString: New Game
@@ -32517,7 +32559,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2074357664}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 058512848498fa54e925c0cccd6217bc, type: 3}
+  m_Script: {fileID: 11500000, guid: 499ae6178ac777f4fa1edd4102da613d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!65 &2074357671
