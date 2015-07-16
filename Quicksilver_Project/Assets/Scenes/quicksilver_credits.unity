@@ -565,8 +565,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: .5, y: 1}
   m_AnchorMax: {x: .5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 200}
-  m_SizeDelta: {x: 400, y: 200}
+  m_AnchoredPosition: {x: 0, y: 430}
+  m_SizeDelta: {x: 400, y: 500}
   m_Pivot: {x: .5, y: 1}
 --- !u!114 &1368930244
 MonoBehaviour:
@@ -604,7 +604,16 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Game Design: Rahmaan Lohdia, Larry He, William Gu, Mitch Leff
+  m_Text: 'Tools/Assets used in development: Standard Assets (Unity Technology), FX
+    Mega Pack 2 (Unluck Software), Tile Tool (Unluck Software), Free Sci-fi Textures
+    (Luca Everhart), Sci-fi Door (3DMondra). Warrios Pack Bundle 1 Free (Explosive),
+    Rain AI (Rival Theory)
+
+
+    Music:  Day 69, Day 60, Day 23 (Mark Sparling at http://marksparling.com/)
+
+
+    Game Design: Rahmaan Lohdia, Larry He, William Gu, Mitch Leff
 
 
     Art: Larry He, Rahmaan Lodhia, William Gu
