@@ -69,6 +69,21 @@ public class GameManager : MonoBehaviour
 		pauseMenuPanel.SetActive (false);
 	}
 
+	public void ReturnToMainMenu ()
+	{
+		EventSystem.current.SetSelectedGameObject(GameObject.Find ("ExitToMainMenu"));
+		ResumeGame ();
+		StartCoroutine(ChangeLevel(0));
+	}
+
+	public void RestartLevel ()
+	{
+		EventSystem.current.SetSelectedGameObject(GameObject.Find ("Restart"));
+		ResumeGame ();
+		StartCoroutine(ChangeLevel(1));
+	}
+
+
 	public IEnumerator ChangeLevel (int index)
 	{
 		Debug.Log("fading");
