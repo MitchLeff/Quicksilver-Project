@@ -18,6 +18,7 @@ public class RobotUserControl : MonoBehaviour
 {
     private RobotCharacter character; 
 	private RobotRagdoll ragdoll;
+	private GameManager GM;
 	private IsometricCamera isoCam;
     private Transform cam;                  
     private Vector3 camForward;             
@@ -50,6 +51,7 @@ public class RobotUserControl : MonoBehaviour
         character = GetComponent<RobotCharacter>();
 		ragdoll = GetComponent<RobotRagdoll>();
 		isoCam = Camera.main.GetComponent<IsometricCamera>();
+		GM = GameObject.Find("GameManager").GetComponent<GameManager>();
 		crouch = false;
 		guard = false;
 		leftTriggerReleased = true;

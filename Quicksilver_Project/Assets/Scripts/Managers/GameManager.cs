@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
 	public GameObject pauseMenuPanel;
 	public GameObject resultsScreen;
 	
-	private bool gamePaused = false;
+	public bool gamePaused = false;
 
 	// Use this for initialization
 	void Start () 
@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour
 	public void PauseGame ()
 	{
 		Time.timeScale = 0;
-		Cursor.lockState = CursorLockMode.None;
+		Cursor.lockState = CursorLockMode.Confined;
 		Cursor.visible = true;
 		gamePaused = true;
 	}
@@ -88,6 +88,8 @@ public class GameManager : MonoBehaviour
 	{
 		resultsScreen.SetActive (true);
 		PauseGame();
+		Cursor.lockState = CursorLockMode.Confined;
+		Cursor.visible = true;
 		EventSystem.current.SetSelectedGameObject(GameObject.Find ("Results_Restart"));
 	}
 
