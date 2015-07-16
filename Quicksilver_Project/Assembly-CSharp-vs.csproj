@@ -54,6 +54,7 @@
      <Compile Include="Assets\Scripts\Enemy\EnemyShooting.cs" />
      <Compile Include="Assets\Scripts\LevelSpecific\prototype\GravelFootstepManager.cs" />
      <Compile Include="Assets\Scripts\LevelSpecific\prototype\SpikeTrapManager.cs" />
+     <Compile Include="Assets\Scripts\Managers\Fading.cs" />
      <Compile Include="Assets\Scripts\Managers\FootstepAudioManager.cs" />
      <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
      <Compile Include="Assets\Scripts\Managers\SceneSwitchManager.cs" />
