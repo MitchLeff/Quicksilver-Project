@@ -2453,7 +2453,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 205816885}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 1997211142, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
@@ -2474,7 +2474,7 @@ MonoBehaviour:
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
   m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
+  m_InputActionsPerSecond: 1
   m_RepeatDelay: .5
   m_AllowActivationOnMobileDevice: 0
 --- !u!114 &205816888
@@ -6307,13 +6307,19 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 11405920, guid: 0bfe9938c80cb4f43bd7e38b8a5d517f, type: 2}
+      propertyPath: levelSelectMenuPanel
+      value: 
+      objectReference: {fileID: 673320548}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0bfe9938c80cb4f43bd7e38b8a5d517f, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &467425609 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 194692, guid: 0bfe9938c80cb4f43bd7e38b8a5d517f, type: 2}
+--- !u!114 &467425610 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11405920, guid: 0bfe9938c80cb4f43bd7e38b8a5d517f,
+    type: 2}
   m_PrefabInternal: {fileID: 467425608}
+  m_Script: {fileID: 11500000, guid: e164a04cc42f1994ea7ccb5a9d143326, type: 3}
 --- !u!1 &470898549
 GameObject:
   m_ObjectHideFlags: 0
@@ -8149,7 +8155,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11498488, guid: a5bea63b65ab341f1913b4cefd41a7a8, type: 2}
       propertyPath: m_Text
-      value: Close Menu
+      value: Main Menu
       objectReference: {fileID: 0}
     - target: {fileID: 127168, guid: a5bea63b65ab341f1913b4cefd41a7a8, type: 2}
       propertyPath: m_Name
@@ -8182,26 +8188,26 @@ Prefab:
     - target: {fileID: 11457236, guid: a5bea63b65ab341f1913b4cefd41a7a8, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 467425609}
+      objectReference: {fileID: 467425610}
     - target: {fileID: 11457236, guid: a5bea63b65ab341f1913b4cefd41a7a8, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: 
+      value: LoadLevel1
       objectReference: {fileID: 0}
     - target: {fileID: 11477754, guid: a5bea63b65ab341f1913b4cefd41a7a8, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 467425609}
+      objectReference: {fileID: 467425610}
     - target: {fileID: 11477754, guid: a5bea63b65ab341f1913b4cefd41a7a8, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: 
+      value: LoadLevel1
       objectReference: {fileID: 0}
     - target: {fileID: 11482962, guid: a5bea63b65ab341f1913b4cefd41a7a8, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 467425609}
+      objectReference: {fileID: 467425610}
     - target: {fileID: 11482962, guid: a5bea63b65ab341f1913b4cefd41a7a8, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: 
+      value: ReturnToMainMenu
       objectReference: {fileID: 0}
     - target: {fileID: 11453900, guid: a5bea63b65ab341f1913b4cefd41a7a8, type: 2}
       propertyPath: m_FontData.m_Font
@@ -9427,6 +9433,10 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 4ee8dd48bd08a7640ae21344d260ca59, type: 2}
   m_PrefabInternal: {fileID: 667111820}
+--- !u!1 &673320548 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 131974, guid: a5bea63b65ab341f1913b4cefd41a7a8, type: 2}
+  m_PrefabInternal: {fileID: 596620465}
 --- !u!1001 &675117792
 Prefab:
   m_ObjectHideFlags: 0
@@ -21140,6 +21150,7 @@ GameObject:
   - 65: {fileID: 1352146097}
   - 65: {fileID: 1352146100}
   - 111: {fileID: 1352146096}
+  - 114: {fileID: 1352146101}
   m_Layer: 18
   m_Name: door
   m_TagString: Level Select
@@ -21235,6 +21246,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4.88257313, y: 1.79999995, z: 4.93993568}
   m_Center: {x: -3.10049261e-14, y: -3.77594461e-06, z: 2.46996784}
+--- !u!114 &1352146101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1352146094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0d572c20d0054a849c64caf960dfbaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1354167264
 GameObject:
   m_ObjectHideFlags: 0

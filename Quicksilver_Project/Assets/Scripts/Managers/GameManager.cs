@@ -8,8 +8,10 @@ public class GameManager : MonoBehaviour
 
 	public GameObject pauseMenuPanel;
 	public GameObject resultsScreen;
+	public GameObject levelSelectMenuPanel;
 	
 	public bool gamePaused = false;
+	public bool levelSelect = false;
 
 	// Use this for initialization
 	void Start () 
@@ -21,7 +23,7 @@ public class GameManager : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		if (Input.GetButtonDown("Start"))
+		if (Input.GetButtonDown("Start") && !levelSelect)
 		{
 			if (!gamePaused)
 			{
@@ -70,6 +72,21 @@ public class GameManager : MonoBehaviour
 		pauseMenuPanel.SetActive (false);
 	}
 
+	public void OpenLevelSelectMenu ()
+	{
+		levelSelect = true;
+		PauseGame();
+		levelSelectMenuPanel.SetActive (true);
+		EventSystem.current.SetSelectedGameObject(GameObject.Find ("Level 1"));
+	}
+	
+	public void CloseLevelSelectMenu ()
+	{
+		levelSelect = false;
+		ResumeGame();
+		levelSelectMenuPanel.SetActive (false);
+	}
+
 	public void ReturnToMainMenu ()
 	{
 		//EventSystem.current.SetSelectedGameObject(GameObject.Find ("ExitToMainMenu"));
@@ -84,6 +101,12 @@ public class GameManager : MonoBehaviour
 		StartCoroutine(ChangeLevel(1));
 	}
 
+	public void LoadLevel1 ()
+	{
+		ResumeGame ();
+		StartCoroutine (ChangeLevel(1));
+	}
+
 	public void OpenSuccessScreen ()
 	{
 		resultsScreen.SetActive (true);
@@ -92,6 +115,7 @@ public class GameManager : MonoBehaviour
 		Cursor.visible = true;
 		EventSystem.current.SetSelectedGameObject(GameObject.Find ("Results_Restart"));
 	}
+
 
 	public IEnumerator ChangeLevel (int index)
 	{
