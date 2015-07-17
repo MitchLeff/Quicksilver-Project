@@ -65,6 +65,22 @@ Prism: mleff3
 - Usage: Used for the Ranged AI's projectile attack.
 
 ### Added to Current Milestone ###
+- Asset: Introduction to New UI by 3D Buzz
+- URL: http://www.3dbuzz.com/training/view/modern-ui-dev-in-unity-46
+- Usage: Custom button images were used for UI menus, and tutorial aided in their creation
+
+- Asset: Crystal Font by Felipe Munoz
+- URL: http://openfontlibrary.org/en/font/crystal
+- License URL: http://creativecommons.org/licenses/by/3.0/legalcode
+- Usage: Used as main font throughout game
+
+- Asset: Day 69, Day 60, Day 23 by Mark Sparling
+- URL: http://www.marksparling.com/
+- Usage: These royalty-free songs were used for the in-game background music
+
+- Asset: 2D Platformer + Free 2D Assets Pack by Brackeys
+- URL: http://www.brackeys.com/preview/2d-platformer-course/
+- Usage: Fading script was used for screen transitions and tutorial implementation was loosely followed in incorporating transition functionality in game
 
 
 ##### Build Instructions ##### 
