@@ -21,13 +21,21 @@ Email: mal8690@gmail.com
 Prism: mleff3
 
 ##### Group Requirements ##### 
-- (COMPLETE) Navigation Mesh Rig:  Four navigation rigs were created for differing heights of platforms and differing size of characters.
-- (COMPLETE) Navigation Targets: Sets of navigation targets were created for use on their own or in conjunction with a waypoint network.
-- (COMPLETE) Waypoint Network Rig:  Two Waypoint Network Rigs were created for use with two of our AIs.
-- (COMPLETE) Waypoint Route Rig:  One Waypoint Route Rig was created for use with one of our AIs.
-- (COMPLETE) Mechanim Motor:  All AIs used utilized the Mechanim Motor to pass parameters to the Animation Controller.
-- (COMPLETE) Mechanim Animator:  All AIs have animation states levereged by using the Set Mechanim Parameter Node in the RAIN AI rig.
-- (COMPLETE) Custom RAIN AI Element:  A RAIN AI action was created to determine where a leading shot should be aimed based on the direction of the player movement.
+- (COMPLETE) Introduction Menu Scene: Game starts with an interactive menu, where the player can control the character and move him toward doors for selecting the various game modes.  The scene contains the Game Title, Group Name, and Menu Options.
+- (COMPLETE) Background Environment: The Background of the title screen is completely interactive.
+- (COMPLETE) Menu Item Design:  While the title scene has interactive elements, the Unity UI system was used to make a pause menu and level select menu.  These menus were desgined with padding and anchors in mind for an aesthetic and ease of view appeal.  The font chosen was Crystal for all menu texts.  The buttons on the menu items are all custom images modified to fit correctly on the screen.  In addition, the buttons were animated for both highlightin and pressed animations.
+- (COMPLETE) Credits: The credits are a standard vertical scroll up with a black background.  In addition, several images were added of the team logo and member pictures to add to the aesthetics.
+- (COMPLETE) Particle Systems:  Our game already had several particle systems provided by the FX Mega Pack.  Two original systems were also created for the purposes of this milestone: an energy projectile particle system and a damage-indication smoke fire particle system.  These two particle systems fulfilled many of the requested requirements.
+- (COMPLETE) Particle System #1: Energy Bullet PS
+	- (COMPLETE) Custom Material:  This particle system utilized several meshes and textures to create the effect seen.
+	- (COMPLETE) Subemitters:  This particle system has three subemitters.  One for an outer wave.  One for a trail for the bullet.  One that happens on colission with an object where it explodes into electricity.
+	- (COMPLETE) Size Over Time: Size and Color over time were mostly used in most of the systems in this PS
+	- (COMPLETE) Triggered Event:  This particle system is trigged on an animation event when the character shoots his gun.  The system persists until it runs out or collides with a surface.
+- (COMPLETE) Particle System #2: Damage Smoke PS
+	- (COMPLETE) Custom Material: This particle system utilized 2-D textures for its effects.
+	- (COMPLETE) Triggered and Persistent PS:  This particle system is attached to enemies and activates when their health is below half.  This system will loop and persist until the enemy dies.  This creates the effect of the enemy being heavily damaged as smoke and fire are coming off its damaged body.
+	- (COMPLETE) Velocity Over Time:  This particle system leverages the velocity over time option for most of its affects.
+	- (COMPLETE) Size Over Time: This particle system also used the size over time and color over time options.
 
 
 ##### Resources Used by Group ##### 
@@ -38,7 +46,7 @@ Prism: mleff3
 
 - Asset: FX Mega Pack 2 by Unluck Software
 - URL: https://www.assetstore.unity3d.com/en/#!/content/14208
-- Usage: Some particle systems were used to create effects for the robot that were used by every group member.
+- Usage: Some particle systems were used to create effects for the robot that were used by every group member.  Some of the textures in this pack were also used to create custom particle systems.
 
 - Asset: Tile Tool by Unluck Software
 - URL: https://www.assetstore.unity3d.com/en/#!/content/19904
@@ -84,7 +92,7 @@ Prism: mleff3
 
 
 ##### Build Instructions ##### 
-Use standard build settings for Web Player. Ensure all three scenes are included in build.
+Use standard build settings for Web Player. Ensure all three scenes (quicksilver_title.unity, quicksilver_m4.unity, and quicksilver_credits.unity) are included in build.
 
 ##### Grader Instructions #####
 ## Group Component ## 
