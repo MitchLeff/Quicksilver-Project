@@ -158,7 +158,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 677417385}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -203,7 +203,7 @@ MonoBehaviour:
   m_Text: 'Audio
 
 
-'
+    Standard Assets by Unity Technologies'
 --- !u!222 &55733653
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -214,6 +214,67 @@ CanvasRenderer:
 Transform:
   m_PrefabParentObject: {fileID: 450056, guid: 5b20e47f949c7704a8112bfc35885573, type: 2}
   m_PrefabInternal: {fileID: 840775276}
+--- !u!1 &123488299
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 123488302}
+  - 222: {fileID: 123488301}
+  - 114: {fileID: 123488300}
+  m_Layer: 5
+  m_Name: TeamPic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &123488300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 123488299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: c6f8390f3f9e94de4b82428202b0bd0d, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &123488301
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 123488299}
+--- !u!224 &123488302
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 123488299}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: .5, z: 1}
+  m_Children: []
+  m_Father: {fileID: 677417385}
+  m_RootOrder: 1
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: .5, y: .5}
 --- !u!1 &276161350
 GameObject:
   m_ObjectHideFlags: 0
@@ -287,7 +348,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: .0219999999
-  m_StereoMirrorMode: 0
 --- !u!4 &276161355
 Transform:
   m_ObjectHideFlags: 0
@@ -485,6 +545,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 582767270}
+  - {fileID: 123488302}
   - {fileID: 1368930243}
   - {fileID: 1052788416}
   - {fileID: 55733650}
@@ -694,7 +755,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 677417385}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -739,7 +800,10 @@ MonoBehaviour:
   m_Text: 'Plugins & Scripts
 
 
-'
+    RobotUserControl, RobotRagdoll, RobotProjectileManager, RobotParticleManager,
+    RobotColliderManager, RobotCharacter, SceneSwitchManager, LevelExitManager, GameManager,
+    FootstepAudioManager, Fading, creditsScroll, ButtonManager, DetermineTargetLocation,
+    EnemyHealth, EnemyShooting, IsometricCamera, RAIN AI'
 --- !u!222 &1052788419
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -899,7 +963,9 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Artwork
 
-'
+
+    FX Mega Pack 2 by Unluck Software, Tile Tool by Unluck Software, Free Sci-Fi Textures
+    bu Luca Eberhart, Sci-Fi Door by 3DMondra, Warriors Pack Bundle 1 Free by Explosive'
 --- !u!222 &1295658984
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -917,7 +983,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 677417385}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -952,7 +1018,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 677417385}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
