@@ -23,7 +23,7 @@ Prism: mleff3
 ##### Group Requirements ##### 
 - (COMPLETE) Introduction Menu Scene: Game starts with an interactive menu, where the player can control the character and move him toward doors for selecting the various game modes.  The scene contains the Game Title, Group Name, and Menu Options.
 - (COMPLETE) Background Environment: The Background of the title screen is completely interactive.
-- (COMPLETE) Menu Item Design:  While the title scene has interactive elements, the Unity UI system was used to make a pause menu and level select menu.  These menus were desgined with padding and anchors in mind for an aesthetic and ease of view appeal.  The font chosen was Crystal for all menu texts.  The buttons on the menu items are all custom images modified to fit correctly on the screen.  In addition, the buttons were animated for both highlightin and pressed animations.
+- (COMPLETE) Menu Item Design:  While the title scene has interactive elements, the Unity UI system was used to make a pause menu and level select menu.  These menus were desgined with padding and anchors in mind for an aesthetic and ease of view appeal.  The font chosen was Crystal for all menu texts.  The buttons on the menu items are all custom images modified to fit correctly on the screen.  In addition, the buttons were animated for both highlightin and pressed animations.  All pop-up menus are navigable by the keyboard / gamepad and mouse.
 - (COMPLETE) Credits: The credits are a standard vertical scroll up with a black background.  In addition, several images were added of the team logo and member pictures to add to the aesthetics.
 - (COMPLETE) Particle Systems:  Our game already had several particle systems provided by the FX Mega Pack.  Two original systems were also created for the purposes of this milestone: an energy projectile particle system and a damage-indication smoke fire particle system.  These two particle systems fulfilled many of the requested requirements.
 - (COMPLETE) Particle System #1: Energy Bullet PS
@@ -108,8 +108,20 @@ Use standard build settings for Web Player. Ensure all three scenes (quicksilver
 	- Shrink/Grow: Left Alt / Right Bumper Gamepad Button
 	- Crouch: C / Leftstick click in (This is toggle button.  Character will remain crouched until button is pushed again)
 	- Activate Ragdoll: K / Rightstick click in (This is a toggle button.  Chracter will remain a Ragdoll until button is pushed again)
+	- Start: Escape / Start Gamepad Button.  Opens the pause menu or used for other functions in game.
 
 - Viewing Requirements:
+On game load, you should see the title scene.  The name of the game and the team will appear on the bottom as a HUD overlay.  The characer should be able to be controlled by the player.  
+
+First, go to the Credits and walk in front of it.  It should immediately load the credits scene.  Note that the credits will begin scrolling up vertically. All the requried information will be present and there will be images to help add flavor to the credits.  Waiting until the credits end will load the game back into the title screen.  Otherwise, pressing start will also return the player to the title screen.
+
+Second, once back in the title screen, walk towards the New Game door.  Stepping in front of it will immediately load the main level of the game.  The player can also reach the main level of the game by going to the Level Select door.  This door will bring up an overlay menu with options for Level 1, Level 2, or Main Menu.  Selecting Level 1 or 2 will load the same main level.  Pressing Main Menu will load the title screen again.
+
+Third, once the main level is loaded, the player can now begin the game.  Pressing Start at this point will open up the Pause Menu.  This menu will have options to resume, restart level, or go back to the main menu.  Once more, feel free to experiment with the different options.
+
+Fourth, during the main level, pressing shoot will release the energy bullet particle system.  Note that it contains several different systems, and on collision, it will burst into an explosion of electricity.
+
+Fifth, find two of the wandering enemeies in the stage (either the large purple brute at the end or the white ninja in the beginning).  Using the Shoot button, fight the enemies with the energy projectile.  The enemies currently both take two hits to die.  After the first hit, note that the enemies will start smoking and have flames sprout.  This is the second particle system.  Note how it persists in the enemies damaged state and uses the various particle system qualities requested by the assignment.  Shooting the enemy again will cause it to die.  On death the particle system will turn off.
 
 
 ##### Unity Scene #####
