@@ -64,13 +64,21 @@ Prism: mleff3
 - URL: https://www.assetstore.unity3d.com/en/#!/content/36405
 - Usage: All Enemy AI models were taken from this model pack.  Each one is used by a group member for their individual AI.
 
-- Asset: RAIN AI for Unity
+- Asset: RAIN AI for Unity by Rival Theory
 - URL: https://www.assetstore.unity3d.com/en/#!/content/23569
 - Usage: Used to program all AI in level.
 
-- Asset: Volume Particle Light
+- Asset: Volume Particle Light by Dark Cube Games
 - URL: https://www.assetstore.unity3d.com/en/#!/content/10105
 - Usage: Used for the Ranged AI's projectile attack.
+
+- Asset: Maze element Ice Golem by Andres Olivella
+- URL: https://www.assetstore.unity3d.com/en/#!/content/3746
+- Usage: Death and hit animations used for AI.
+
+- Asset: Universal Sound FX by Imphenzia
+- URL: https://www.assetstore.unity3d.com/en/#!/content/17256
+- Usage: Used for most of the sound effects in game.
 
 ### Added to Current Milestone ###
 - Asset: Introduction to New UI by 3D Buzz

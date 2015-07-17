@@ -30,8 +30,8 @@ public class creditsScroll : MonoBehaviour
 		}
 		else if (crawling)
 		{
-			rt.Translate(Vector3.up * Time.deltaTime*20);
-			if (rt.anchoredPosition3D.y > -6500)
+			rt.Translate(Vector3.up * Time.deltaTime*10);
+			if (rt.anchoredPosition3D.y > -4750)
 			{
 				crawling = false;
 			}
