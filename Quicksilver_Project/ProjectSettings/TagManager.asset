@@ -12,6 +12,8 @@ TagManager:
   - Exit
   - New Game
   - Level Select
+  - SF_Door
+  - Enemy
   layers:
   - Default
   - TransparentFX
