@@ -135,7 +135,11 @@ ModelImporter:
     optimizeGameObjects: 0
     motionNodeName: 
     animationImportErrors: 
-    animationImportWarnings: 
+    animationImportWarnings: 'MuscleClip ''Ninja@Run''conversion warning: ''Motion/B_Pelvis/B_Spine''
+      has translation animation. It is not supported.
+
+
+'
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     animationCompression: 0
