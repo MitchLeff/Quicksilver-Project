@@ -116,6 +116,10 @@ public class GameManager : MonoBehaviour
 		EventSystem.current.SetSelectedGameObject(GameObject.Find ("Results_Restart"));
 	}
 
+	public void ExitGame()
+	{
+		Application.Quit();
+	}
 
 	public IEnumerator ChangeLevel (int index)
 	{
