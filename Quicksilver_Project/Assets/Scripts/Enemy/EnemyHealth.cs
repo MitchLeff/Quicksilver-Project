@@ -25,6 +25,7 @@ public class EnemyHealth : MonoBehaviour
 		anim = GetComponent<Animator>();
 		ai = GetComponentInChildren<AIRig>();
 		col = GetComponent<CapsuleCollider>();
+		Health = 10;
 		startingHealth = Health;
 	}
 	
