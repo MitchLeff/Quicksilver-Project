@@ -4,7 +4,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 
-public class ButtonManager : MonoBehaviour, IPointerEnterHandler, IDeselectHandler
+public class ButtonManager : MonoBehaviour, IPointerEnterHandler, ISelectHandler, IDeselectHandler
 {
 	private Animator anim;
 
@@ -30,4 +30,10 @@ public class ButtonManager : MonoBehaviour, IPointerEnterHandler, IDeselectHandl
 	{
 		anim.SetTrigger("Normal");
 	}	
+
+	public void OnSelect (BaseEventData eventData)
+	{
+		anim.SetTrigger("Highlighting");
+		anim.SetTrigger("SelectionTrigger");
+	}
 }
