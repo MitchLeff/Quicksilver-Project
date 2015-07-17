@@ -1,4 +1,10 @@
-﻿using UnityEngine;
+﻿// Team Quicksilver
+// Rahmaan Lodhia
+// William Gu
+// Larry He
+// Mitch Leff
+
+using UnityEngine;
 using System.Collections;
 using RAIN.Core;
 

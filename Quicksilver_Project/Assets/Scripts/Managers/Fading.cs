@@ -1,4 +1,12 @@
-﻿using UnityEngine;
+﻿// Team Quicksilver
+// Rahmaan Lodhia
+// William Gu
+// Larry He
+// Mitch Leff
+
+// Taken from 2D Platformer + Free 2D Assets Pack by Brackeys
+
+using UnityEngine;
 using System.Collections;
 
 public class Fading : MonoBehaviour {
