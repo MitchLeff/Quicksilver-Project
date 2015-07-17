@@ -40,6 +40,7 @@ public class EnemyHealth : MonoBehaviour
 		if (anim.GetCurrentAnimatorStateInfo(0).IsName("TurnOffAnimator"))
 		{
 			anim.enabled = false;
+			ps.Stop();
 		}
 	}
 
@@ -49,7 +50,6 @@ public class EnemyHealth : MonoBehaviour
 		Health = Health - amount;
 		anim.SetFloat("Speed", 0f);
 		anim.SetTrigger("HitTrigger");
-		//ai.enabled = false;
 	}
 
 	public void Die ()
