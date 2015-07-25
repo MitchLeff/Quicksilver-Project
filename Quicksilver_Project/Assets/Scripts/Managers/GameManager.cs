@@ -8,17 +8,16 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.EventSystems;
 
-
 public class GameManager : MonoBehaviour 
 {
 
 	public GameObject pauseMenuPanel;
 	public GameObject resultsScreen;
 	public GameObject levelSelectMenuPanel;
-	
+
 	public bool gamePaused = false;
 	public bool levelSelect = false;
-
+	
 	// Use this for initialization
 	void Start () 
 	{
