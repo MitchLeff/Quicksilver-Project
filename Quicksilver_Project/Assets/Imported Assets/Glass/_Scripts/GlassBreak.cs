@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Break : MonoBehaviour 
+public class GlassBreak : MonoBehaviour 
 {
 	public Transform brokenObject;
 	public float magnitudeCol, radius, power, upwards;
