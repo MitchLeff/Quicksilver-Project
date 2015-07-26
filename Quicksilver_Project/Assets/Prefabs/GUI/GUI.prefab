@@ -1442,11 +1442,11 @@ MonoBehaviour:
   attackButtonGUI: {fileID: 191684}
   shootButtonGUI: {fileID: 196062}
   jumpButtonGUI: {fileID: 187744}
-  shrinkProgressSpeed: 25
+  shrinkProgressSpeed: 10
   dashProgressSpeed: .400000006
-  attackProgressSpeed: .400000006
+  attackProgressSpeed: 2
   shootProgressSpeed: .5
-  jumpProgressSpeed: .200000003
+  jumpProgressSpeed: .5
 --- !u!114 &11439684
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -18,6 +18,7 @@ public class RobotParticleManager : MonoBehaviour
 	private GameObject wallCrashPS;
 	private GameObject sizeChangePS;
 	private GameObject energyBulletPS;
+	private GameObject slashWavePS;
 
 	private RobotCharacter character; 
 	private Animator anim;
@@ -40,6 +41,7 @@ public class RobotParticleManager : MonoBehaviour
 		wallCrashPS = GameObject.Find ("WallCrashPS");
 		sizeChangePS = GameObject.Find ("SizeChangeAuraPS");
 		energyBulletPS = GameObject.Find ("EnergyBulletPS");
+		slashWavePS = GameObject.Find ("SlashWavePS");
 
 	}
 	
@@ -162,6 +164,15 @@ public class RobotParticleManager : MonoBehaviour
 		ps.Simulate(0.0001f, true, true);
 		ps.Play();
 	}
+
+	public void ActivateSlashWaveEffect()
+	{
+		ParticleSystem ps = slashWavePS.GetComponent<ParticleSystem>();
+		ps.Clear();
+		ps.Simulate(0.0001f, true, true);
+		ps.Play();
+	}
+
 
 	public void ActivateThrusterEffect()
 	{

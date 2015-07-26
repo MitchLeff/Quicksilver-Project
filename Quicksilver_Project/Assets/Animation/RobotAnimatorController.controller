@@ -1204,7 +1204,7 @@ AnimatorState:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Slash
-  m_Speed: 2
+  m_Speed: 3
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 110148596}
@@ -1216,7 +1216,7 @@ AnimatorState:
   m_SpeedParameterActive: 0
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 31067316ace24684ba445229a3942ed4, type: 3}
+  m_Motion: {fileID: 7400000, guid: 8f0c6af382244a248a4b3082c52a7485, type: 2}
   m_Tag: 
   m_SpeedParameter: Forward
   m_MirrorParameter: 
