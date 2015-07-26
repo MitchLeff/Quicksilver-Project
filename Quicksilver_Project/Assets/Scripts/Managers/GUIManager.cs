@@ -35,13 +35,14 @@ public class GUIManager : MonoBehaviour
 
 		jumpButton = jumpButtonGUI.GetComponentInChildren<ProgressRadialBehaviour>();
 		jumpButton.IncrementValue(100f);
-
-
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
-	
+		if (shootButton.Value == 0f)
+		{
+
+		}
 	}
 }
