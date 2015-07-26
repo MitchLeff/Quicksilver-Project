@@ -104,6 +104,20 @@ ModelImporter:
     bakeSimulation: 0
     optimizeGameObjects: 0
     motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 'MuscleClip ''robot_dash'' conversion warning: ''Hips/LeftUpperLeg/LeftLeg/LeftAnkle''
+      is between humanoid transforms and has rotation animation. This might lower
+      retargeting quality.
+
+
+      MuscleClip ''robot_dash'' conversion warning: ''Hips/RightUpperLeg/RightLeg/RightAnkle''
+      is between humanoid transforms and has rotation animation. This might lower
+      retargeting quality.
+
+
+'
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
     animationCompression: 3
     animationRotationError: .5
     animationPositionError: .5
@@ -115,13 +129,13 @@ ModelImporter:
       name: Dash
       takeName: Take 001
       firstFrame: 75
-      lastFrame: 105
+      lastFrame: 82
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 1
       loopBlendPositionY: 1
@@ -138,22 +152,12 @@ ModelImporter:
           serializedVersion: 2
           curve:
           - time: 0
-            value: .100000001
-            inSlope: 0
-            outSlope: 0
-            tangentMode: 0
-          - time: .0395605564
-            value: 1
-            inSlope: 0
-            outSlope: 0
-            tangentMode: 0
-          - time: .960439444
             value: 1
             inSlope: 0
             outSlope: 0
             tangentMode: 0
           - time: 1
-            value: .100000001
+            value: 1
             inSlope: 0
             outSlope: 0
             tangentMode: 0
@@ -164,22 +168,12 @@ ModelImporter:
           serializedVersion: 2
           curve:
           - time: 0
-            value: .5
-            inSlope: 0
-            outSlope: 0
-            tangentMode: 0
-          - time: .0395605564
-            value: .75
-            inSlope: 0
-            outSlope: 0
-            tangentMode: 0
-          - time: .960439444
-            value: .75
+            value: .750071645
             inSlope: 0
             outSlope: 0
             tangentMode: 0
           - time: 1
-            value: .5
+            value: .750071645
             inSlope: 0
             outSlope: 0
             tangentMode: 0

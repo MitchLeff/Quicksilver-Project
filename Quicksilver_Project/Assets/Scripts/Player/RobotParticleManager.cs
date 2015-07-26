@@ -23,6 +23,7 @@ public class RobotParticleManager : MonoBehaviour
 	private Animator anim;
 	private AnimatorStateInfo currentBaseState;
 	private AnimatorStateInfo currentShieldState;
+	private AnimatorStateInfo nextBaseState;
 
 	void Start () 
 	{
@@ -46,6 +47,7 @@ public class RobotParticleManager : MonoBehaviour
 	{
 		currentBaseState = anim.GetCurrentAnimatorStateInfo(0);
 		currentShieldState = anim.GetCurrentAnimatorStateInfo(1);
+		nextBaseState = anim.GetNextAnimatorStateInfo(0);
 
 		// Check if size change has been activated by the user
 		if (character.sizeChangeTransition)
@@ -68,7 +70,7 @@ public class RobotParticleManager : MonoBehaviour
 		}
 
 		// Check if character is dashing
-		if (currentBaseState.IsName("Dash"))
+		if (nextBaseState.IsName("Dash"))
 		{
 			ActivateDashEffect();
 		}
@@ -124,6 +126,8 @@ public class RobotParticleManager : MonoBehaviour
 		
 		if (!ps.isPlaying)
 		{
+			ps.Clear();
+			ps.Simulate(0.0001f, true, true);
 			ps.Play();
 			dashBangPS.GetComponent<AudioSource>().Play();
 		}

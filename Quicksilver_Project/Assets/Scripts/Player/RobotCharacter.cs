@@ -59,7 +59,7 @@ public class RobotCharacter: MonoBehaviour
 	// Variables used to reference other components and set current states of character
 	private Rigidbody rig;
 	private Animator anim;
-	private bool isGrounded;
+	public bool isGrounded;
 	private bool isDashing;
 	private bool isGuarding;
 	private bool isAirDashing;
@@ -272,7 +272,7 @@ public class RobotCharacter: MonoBehaviour
 		}
 		else if (currentBaseState.IsName("Dash") )
 		{
-			HandleDashMovement();
+			HandleDashMovement(dash);
 		}
 	}
 
@@ -285,13 +285,13 @@ public class RobotCharacter: MonoBehaviour
 		// Check to see if air dashing is requested and conditions are met for it otherwise continue falling while airborne
 		if (dash && !normalSizedState)
 		{
-			anim.SetBool("Dash",true);
-			anim.SetFloat("Jump", 0f);
-			isAirDashing = true;
+			//anim.SetBool("Dash",true);
+			//anim.SetFloat("Jump", 0f);
+			//isAirDashing = true;
 		}
 		else if (currentBaseState.IsName("Dash"))
 		{
-			HandleDashMovement();
+			//HandleDashMovement(dash);
 		}
 		else
 		{
@@ -320,16 +320,22 @@ public class RobotCharacter: MonoBehaviour
 		groundCheckDistance = rig.velocity.y < 0 ? origGroundCheckDistance : 0.01f;
 	}
 
-	void HandleDashMovement()
+	void HandleDashMovement(bool dash)
 	{
 		// Apply a forward velocity according to dashing speed specified
 		rig.velocity = transform.forward*dashingSpeed;
 
 		// Reset Dash to allow for another input later
-		if (!anim.IsInTransition(0))
+//		if (!anim.IsInTransition(0))
+//		{
+//			anim.SetBool("Dash",false);
+//		}
+
+		if (!dash)
 		{
 			anim.SetBool("Dash",false);
-		}		
+		}
+
 	}
 	
 	void ScaleCapsuleForCrouching(bool crouch)

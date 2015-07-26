@@ -69,6 +69,12 @@ public class RobotUserControl : MonoBehaviour
 			gui.StartShrinkRecharge();
 		}
 
+		if (gui.IsDashOver())
+		{
+			dash = false;
+			gui.StartDashRecharge();
+		}
+
 
 		// On each update check which buttons are pressed to determine if an action is being requested
         if (!jump)
@@ -76,9 +82,15 @@ public class RobotUserControl : MonoBehaviour
             jump = Input.GetButtonDown("Jump");
         }
 
-		if (!dash)
+		if (Input.GetButton("Dash") && gui.IsDashReady() && character.isGrounded)
 		{
-			dash = Input.GetButtonDown("Dash");
+			dash = true;
+			gui.StartDashTimer();
+		}
+		else if (!Input.GetButton("Dash"))
+		{
+			dash = false;
+			gui.StartDashRecharge();
 		}
 
 		if (Input.GetButtonDown("Crouch"))
@@ -193,7 +205,6 @@ public class RobotUserControl : MonoBehaviour
 		}
 		// Reset all input booleans, so that the action is ready to be performed again
         jump = false;
-		dash = false;
 		sizeChange = false;
 		attack = false;
 		shoot = false;

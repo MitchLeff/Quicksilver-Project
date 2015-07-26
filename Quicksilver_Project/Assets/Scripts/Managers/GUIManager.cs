@@ -75,6 +75,18 @@ public class GUIManager : MonoBehaviour
 		shootButton.Value = 0.0f;
 	}
 
+	public void StartDashTimer()
+	{
+		dashButton.ProgressSpeed = 1.5f;
+		dashButton.DecrementValue(100f); 
+	}
+
+	public void StartDashRecharge()
+	{
+		dashButton.ProgressSpeed = dashProgressSpeed;
+		dashButton.IncrementValue(100f);
+	}
+
 	public void StartShrinkTimer()
 	{
 		shrinkMeter.DecrementValue(100f);
@@ -95,6 +107,11 @@ public class GUIManager : MonoBehaviour
 		return (shrinkMeter.isPaused && shrinkMeter.Value == 0.0f);
 	}
 
+	public bool IsDashOver()
+	{
+		return (dashButton.isPaused && dashButton.Value == 0.0f);
+	}
+
 	public bool IsAttackReady()
 	{
 		return (attackButton.isDone && attackButton.isPaused);
@@ -103,5 +120,10 @@ public class GUIManager : MonoBehaviour
 	public bool IsShootReady()
 	{
 		return (shootButton.isDone && shootButton.isPaused);
+	}
+
+	public bool IsDashReady()
+	{
+		return (dashButton.isDone && dashButton.isPaused);
 	}
 }
