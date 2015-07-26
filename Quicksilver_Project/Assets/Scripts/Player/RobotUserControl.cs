@@ -19,6 +19,7 @@ public class RobotUserControl : MonoBehaviour
     private RobotCharacter character; 
 	private RobotRagdoll ragdoll;
 	private GameManager GM;
+	private GUIManager gui;
 	private IsometricCamera isoCam;
     private Transform cam;                  
     private Vector3 camForward;             
@@ -52,6 +53,7 @@ public class RobotUserControl : MonoBehaviour
 		ragdoll = GetComponent<RobotRagdoll>();
 		isoCam = Camera.main.GetComponent<IsometricCamera>();
 		GM = GameObject.Find("GameManager").GetComponent<GameManager>();
+		gui = GameObject.Find ("GUI").GetComponentInChildren<GUIManager>();
 		crouch = false;
 		guard = false;
 		leftTriggerReleased = true;
@@ -77,14 +79,16 @@ public class RobotUserControl : MonoBehaviour
 			crouch = !crouch;
 		}
 
-		if (Input.GetButtonDown("Attack"))
+		if (Input.GetButtonDown("Attack") && gui.IsAttackReady())
 		{
 			attack = true;
+			gui.StartAttackCooldown();
 		}
 
-		if (Input.GetButtonDown ("Shoot"))
+		if (Input.GetButtonDown ("Shoot") && gui.IsShootReady())
 		{
 			shoot = true;
+			gui.StartShootCooldown();
 		}
 
 		if (Input.GetButtonDown("SizeChange"))

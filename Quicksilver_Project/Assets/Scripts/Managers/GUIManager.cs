@@ -40,9 +40,34 @@ public class GUIManager : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		if (shootButton.Value == 0f)
+		if (shootButton.Value == 0f && shootButton.isPaused)
 		{
-
+			shootButton.IncrementValue(100f);
 		}
+
+		if (attackButton.Value == 0f && attackButton.isPaused)
+		{
+			attackButton.IncrementValue(100f);
+		}
+	}
+
+	public void StartAttackCooldown()
+	{
+		attackButton.Value = 0.0f;
+	}
+
+	public void StartShootCooldown()
+	{
+		shootButton.Value = 0.0f;
+	}
+
+	public bool IsAttackReady()
+	{
+		return (attackButton.Value == 100f);
+	}
+
+	public bool IsShootReady()
+	{
+		return (shootButton.Value == 100f);
 	}
 }
