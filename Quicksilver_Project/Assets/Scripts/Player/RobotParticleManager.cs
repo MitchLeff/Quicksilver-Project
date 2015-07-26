@@ -163,4 +163,27 @@ public class RobotParticleManager : MonoBehaviour
 		ps.Play();
 	}
 
+	public void ActivateThrusterEffect()
+	{
+		ParticleSystem psL = leftThrusterPS.GetComponent<ParticleSystem>();
+		ParticleSystem psR = rightThrusterPS.GetComponent<ParticleSystem>();
+		if (!psL.isPlaying && !psR.isPlaying)
+		{
+			psL.Play();
+			psR.Play();
+		}
+	}
+
+	public void DeactivateThrusterEffect()
+	{
+		ParticleSystem psL = leftThrusterPS.GetComponent<ParticleSystem>();
+		ParticleSystem psR = rightThrusterPS.GetComponent<ParticleSystem>();
+		if (psL.isPlaying && psR.isPlaying)
+		{
+			psL.Stop();
+			psR.Stop();
+			psL.Clear();
+			psR.Clear();
+		}
+	}
 }

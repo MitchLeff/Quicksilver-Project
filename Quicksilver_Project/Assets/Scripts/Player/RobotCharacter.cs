@@ -190,6 +190,10 @@ public class RobotCharacter: MonoBehaviour
 		else
 		{
 			HandleAirborneMovement(move, dash);
+			if (jump)
+			{
+				HandleVerticleDashMovement();
+			}
 		}
 
 		ScaleCapsuleForCrouching(crouch);
@@ -302,7 +306,7 @@ public class RobotCharacter: MonoBehaviour
 			 //After reaching peak of jump, allow character to alter falling path
 			if (forwardAmount > 0)
 			{
-				rig.velocity = new Vector3(0, rig.velocity.y, 0) + transform.forward.normalized * 1f;
+				rig.velocity = new Vector3(0, rig.velocity.y, 0) + transform.forward.normalized * 5f;
 			}
 			else
 			{
@@ -337,7 +341,12 @@ public class RobotCharacter: MonoBehaviour
 		}
 
 	}
-	
+
+	void HandleVerticleDashMovement()
+	{
+		rig.velocity = transform.up*jumpPower;
+	}
+
 	void ScaleCapsuleForCrouching(bool crouch)
 	{
 		// Create layer mask for specified raycasts

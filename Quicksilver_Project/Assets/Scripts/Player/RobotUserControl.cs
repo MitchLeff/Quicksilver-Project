@@ -13,11 +13,13 @@ using UnityEngine;
 
 [RequireComponent(typeof (RobotCharacter))]
 [RequireComponent(typeof (RobotRagdoll))]
+[RequireComponent(typeof (RobotParticleManager))]
 
 public class RobotUserControl : MonoBehaviour
 {
     private RobotCharacter character; 
 	private RobotRagdoll ragdoll;
+	private RobotParticleManager particle;
 	private GameManager GM;
 	private GUIManager gui;
 	private IsometricCamera isoCam;
@@ -51,6 +53,7 @@ public class RobotUserControl : MonoBehaviour
         // Initialize variables
         character = GetComponent<RobotCharacter>();
 		ragdoll = GetComponent<RobotRagdoll>();
+		particle = GetComponent<RobotParticleManager>();
 		isoCam = Camera.main.GetComponent<IsometricCamera>();
 		GM = GameObject.Find("GameManager").GetComponent<GameManager>();
 		gui = GameObject.Find ("GUI").GetComponentInChildren<GUIManager>();
@@ -75,12 +78,25 @@ public class RobotUserControl : MonoBehaviour
 			gui.StartDashRecharge();
 		}
 
+		if (gui.IsJumpOver())
+		{
+			jump = false;
+			gui.StartJumpRecharge();
+		}
 
 		// On each update check which buttons are pressed to determine if an action is being requested
-        if (!jump)
-        {
-            jump = Input.GetButtonDown("Jump");
-        }
+		if (Input.GetButton("Jump") && gui.IsJumpReady())
+		{
+			jump = true;
+			gui.StartJumpTimer();
+			particle.ActivateThrusterEffect();
+		}
+		else if (!Input.GetButton("Jump"))
+		{
+			jump = false;
+			gui.StartJumpRecharge();
+			particle.DeactivateThrusterEffect();
+		}
 
 		if (Input.GetButton("Dash") && gui.IsDashReady() && character.isGrounded)
 		{
@@ -204,7 +220,6 @@ public class RobotUserControl : MonoBehaviour
         	character.Move(move, crouch, jump, dash, guard, attack, shoot, sizeChange);
 		}
 		// Reset all input booleans, so that the action is ready to be performed again
-        jump = false;
 		sizeChange = false;
 		attack = false;
 		shoot = false;

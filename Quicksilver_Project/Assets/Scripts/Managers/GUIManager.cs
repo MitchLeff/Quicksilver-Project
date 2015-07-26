@@ -23,6 +23,8 @@ public class GUIManager : MonoBehaviour
 	private ProgressRadialBehaviour shootButton;
 	private ProgressRadialBehaviour jumpButton;
 
+	private bool jumpAvailable = true;
+
 
 	// Use this for initialization
 	void Start () 
@@ -61,6 +63,16 @@ public class GUIManager : MonoBehaviour
 			attackButton.ProgressSpeed = attackProgressSpeed;
 			attackButton.IncrementValue(100f);
 		}
+
+		if (jumpButton.TransitoryValue == 0f && jumpAvailable)
+		{	
+			jumpAvailable = false;
+		}
+
+		if (!jumpAvailable && jumpButton.TransitoryValue == 1f)
+		{
+			jumpAvailable = true;
+		}
 	}
 
 	public void StartAttackCooldown()
@@ -85,6 +97,18 @@ public class GUIManager : MonoBehaviour
 	{
 		dashButton.ProgressSpeed = dashProgressSpeed;
 		dashButton.IncrementValue(100f);
+	}
+
+	public void StartJumpRecharge()
+	{
+		jumpButton.ProgressSpeed = jumpProgressSpeed;
+		jumpButton.IncrementValue(100f);
+	}
+
+	public void StartJumpTimer()
+	{
+		jumpButton.ProgressSpeed = 1.5f;
+		jumpButton.DecrementValue(100f);
 	}
 
 	public void StartShrinkTimer()
@@ -112,6 +136,11 @@ public class GUIManager : MonoBehaviour
 		return (dashButton.isPaused && dashButton.Value == 0.0f);
 	}
 
+	public bool IsJumpOver()
+	{
+		return (jumpButton.isPaused && jumpButton.Value == 0.0f);
+	}
+
 	public bool IsAttackReady()
 	{
 		return (attackButton.isDone && attackButton.isPaused);
@@ -125,5 +154,10 @@ public class GUIManager : MonoBehaviour
 	public bool IsDashReady()
 	{
 		return (dashButton.isDone && dashButton.isPaused);
+	}
+
+	public bool IsJumpReady()
+	{
+		return (jumpButton.TransitoryValue > 0.0f && jumpAvailable);
 	}
 }
