@@ -63,6 +63,13 @@ public class RobotUserControl : MonoBehaviour
 
     private void Update()
     {
+		if (gui.IsShrinkOver() && !character.normalSizedState)
+		{
+			sizeChange = true;
+			gui.StartShrinkRecharge();
+		}
+
+
 		// On each update check which buttons are pressed to determine if an action is being requested
         if (!jump)
         {
@@ -93,7 +100,16 @@ public class RobotUserControl : MonoBehaviour
 
 		if (Input.GetButtonDown("SizeChange"))
 		{
-			sizeChange = true;
+			if (gui.IsShrinkReady())
+			{
+				gui.StartShrinkTimer();
+				sizeChange = true;
+			}
+			else if (!character.normalSizedState)
+			{
+				gui.StartShrinkRecharge();
+				sizeChange = true;
+			}
 		}
 
 		if (Input.GetButtonDown ("Death")) 

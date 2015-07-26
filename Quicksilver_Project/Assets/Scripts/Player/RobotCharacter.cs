@@ -47,7 +47,7 @@ public class RobotCharacter: MonoBehaviour
 	[SerializeField] float targetShrinkScale = 0.5f;
 	[SerializeField] float sizeChangeSpeed = 5f;
 	public bool sizeChangeTransition;
-	private bool normalSizedState;
+	public bool normalSizedState;
 	private bool shrinkingActivated;
 	private bool growingActivated;
 

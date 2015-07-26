@@ -75,6 +75,26 @@ public class GUIManager : MonoBehaviour
 		shootButton.Value = 0.0f;
 	}
 
+	public void StartShrinkTimer()
+	{
+		shrinkMeter.DecrementValue(100f);
+	}
+
+	public void StartShrinkRecharge()
+	{
+		shrinkMeter.IncrementValue(100f);
+	}
+
+	public bool IsShrinkReady()
+	{
+		return (shrinkMeter.isDone && shrinkMeter.isPaused);
+	}
+
+	public bool IsShrinkOver()
+	{
+		return (shrinkMeter.isPaused && shrinkMeter.Value == 0.0f);
+	}
+
 	public bool IsAttackReady()
 	{
 		return (attackButton.isDone && attackButton.isPaused);
