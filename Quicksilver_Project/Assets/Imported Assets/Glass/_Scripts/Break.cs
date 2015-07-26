@@ -20,7 +20,7 @@ public class Break : MonoBehaviour
 			{
 				if (hit.GetComponent<Rigidbody>())
 				{
-					hit.GetComponent<Rigidbody>().AddExplosionForce(power*collision.relativeVelocity.magnitude, explosionPos, radius, upwards);
+					hit.GetComponent<Rigidbody>().AddExplosionForce(power*3, explosionPos, radius, upwards);
 				}
 			}
 		}
