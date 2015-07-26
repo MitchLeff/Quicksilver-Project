@@ -24,16 +24,16 @@ public class GUIManager : MonoBehaviour
 		shrinkMeter = ShrinkMeterGUI.GetComponent<ProgressBarBehaviour>();
 		shrinkMeter.IncrementValue(100f);
 
-		dashButton = dashButtonGUI.GetComponent<ProgressRadialBehaviour>();
+		dashButton = dashButtonGUI.GetComponentInChildren<ProgressRadialBehaviour>();
 		dashButton.IncrementValue(100f);
 
-		attackButton = attackButtonGUI.GetComponent<ProgressRadialBehaviour>();
+		attackButton = attackButtonGUI.GetComponentInChildren<ProgressRadialBehaviour>();
 		attackButton.IncrementValue(100f);
 
-		shootButton = shootButtonGUI.GetComponent<ProgressRadialBehaviour>();
+		shootButton = shootButtonGUI.GetComponentInChildren<ProgressRadialBehaviour>();
 		shootButton.IncrementValue(100f);
 
-		jumpButton = jumpButtonGUI.GetComponent<ProgressRadialBehaviour>();
+		jumpButton = jumpButtonGUI.GetComponentInChildren<ProgressRadialBehaviour>();
 		jumpButton.IncrementValue(100f);
 
 
