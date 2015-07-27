@@ -10,7 +10,7 @@ public class GlassBreak : MonoBehaviour
 
 	void OnCollisionEnter(Collision collision)
 	{
-		if (collision.gameObject.tag == "Bomb" || (collision.gameObject.tag == "Player" && collision.relativeVelocity.magnitude > magnitudeCol))
+		if (collision.gameObject.tag == "Player" && collision.relativeVelocity.magnitude > magnitudeCol)
 		{
 			Destroy(gameObject);
 			Instantiate(brokenObject, transform.position, transform.rotation);

@@ -42,6 +42,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b7577c53713d7047a8b79256a2c0c60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  time: .5
+  radius: 2
+  power: 500000
 --- !u!135 &13553234
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -52,7 +55,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 2
+  m_Radius: 1.79999995
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!198 &19807462
 ParticleSystem:
@@ -1139,7 +1142,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Radius
-      value: 2
+      value: 1.79999995
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_IsTrigger
@@ -1164,6 +1167,14 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: radius
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: power
+      value: 500000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
