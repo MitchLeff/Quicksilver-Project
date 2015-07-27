@@ -15,6 +15,7 @@ TagManager:
   - SF_Door
   - Enemy
   - Bomb
+  - Glass
   layers:
   - Default
   - TransparentFX
