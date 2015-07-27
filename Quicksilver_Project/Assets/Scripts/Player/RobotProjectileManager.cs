@@ -29,5 +29,11 @@ public class RobotProjectileManager : MonoBehaviour
 			Debug.Log ("Enemy Hit");
 			other.GetComponent<EnemyHealth>().TakeDamage(5);
 		}
+
+		if (other.tag == "Bomb")
+		{
+			Debug.Log ("Bomb Hit");
+			other.GetComponent<BombExplode>().Explode();
+		}
 	}
 }
