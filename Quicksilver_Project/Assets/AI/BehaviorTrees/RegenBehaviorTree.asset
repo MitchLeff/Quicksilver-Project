@@ -24,16 +24,7 @@ MonoBehaviour:
       name=&quot;detect player close&quot; matchtype=&quot;best&quot; entityobjectvariable=&quot;PlayerTargetInRange&quot;
       debugbreak=&quot;False&quot; consistent=&quot;True&quot; aspectvariable=&quot;&quot;
       aspectobjectvariable=&quot;&quot; aspect=&quot;&amp;quot;Player&amp;quot;&quot;
-      /&gt;&lt;sequencer usepriorities=&quot;False&quot; repeatuntil=&quot;&quot;
-      name=&quot;sequencer&quot; debugbreak=&quot;False&quot;&gt;&lt;mecparam valueexpression=&quot;True&quot;
-      repeatuntil=&quot;&quot; priority=&quot;&quot; parametertype=&quot;trigger&quot;
-      parametername=&quot;Attack2Trigger&quot; name=&quot;Punch&quot; debugbreak=&quot;False&quot;
-      damptime=&quot;0&quot; /&gt;&lt;timer waitforsec=&quot;15&quot; returnvalue=&quot;failure&quot;
-      priority=&quot;&quot; name=&quot;timer&quot; debugbreak=&quot;False&quot; /&gt;&lt;mecparam
-      valueexpression=&quot;&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
-      parametertype=&quot;trigger&quot; parametername=&quot;DeathTrigger&quot; name=&quot;Death&quot;
-      debugbreak=&quot;False&quot; damptime=&quot;0&quot; /&gt;&lt;/sequencer&gt;&lt;selector
-      usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; name=&quot;selector&quot;
+      /&gt;&lt;selector usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; name=&quot;selector&quot;
       debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;&quot; priority=&quot;&quot;
       name=&quot;player not in sight&quot; debugbreak=&quot;False&quot; constraint=&quot;PlayerTargetDetected
       == null &amp;amp;&amp;amp; PlayerTargetInRange == null&quot;&gt;&lt;sequencer

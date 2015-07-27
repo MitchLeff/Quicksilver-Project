@@ -11,7 +11,7 @@ using RAIN.Core;
 public class EnemyHealth : MonoBehaviour 
 {
 
-	public int Health = 10;
+	public int Health;
 
 	private Animator anim;
 	private AIRig ai;
@@ -25,7 +25,6 @@ public class EnemyHealth : MonoBehaviour
 		anim = GetComponent<Animator>();
 		ai = GetComponentInChildren<AIRig>();
 		col = GetComponent<CapsuleCollider>();
-		Health = 10;
 		startingHealth = Health;
 	}
 	
@@ -33,6 +32,7 @@ public class EnemyHealth : MonoBehaviour
 	void Update () 
 	{
 		ParticleSystem ps = DamageSmokePS.GetComponent<ParticleSystem>();
+		//Debug.Log (Health);
 
 		if (Health <= startingHealth/2 && !ps.isPlaying)
 		{
@@ -65,5 +65,9 @@ public class EnemyHealth : MonoBehaviour
 		ai.enabled = false;
 		col.enabled = false;
 		DamageSmokePS.transform.position = this.transform.position;
+		/*if (this.gameObject.name.Contains ("RegenWarrior")) {
+			Debug.Log("I live!");
+			Instantiate(this.gameObject, transform.position, transform.rotation);
+		}*/
 	}
 }
