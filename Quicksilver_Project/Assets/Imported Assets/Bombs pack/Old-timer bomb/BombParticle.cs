@@ -5,6 +5,7 @@ public class BombParticle : MonoBehaviour {
 
 	//time until object is destroyed
 	public float time, radius, power;
+	bool canCollide = true;
 
 	void Start() {
 		ApplyForce ();
@@ -13,12 +14,18 @@ public class BombParticle : MonoBehaviour {
 	void Update() {
 		time -= Time.deltaTime;
 		if (time < 0f) {
+			canCollide = false;
+		}
+		if (time < -7f) {
 			Destroy(gameObject);
 		}
 	}
 
 	void OnTriggerEnter(Collider collision)
 	{
+		if (!canCollide) //meant to allow explosion sound to play to end
+			return;
+
 		if (collision.gameObject.tag == "Player") {
 			Debug.Log ("Bomb hurts player!");
 			//insert player damage code here
