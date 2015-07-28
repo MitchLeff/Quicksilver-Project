@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
 
 	public float targetScore;
 	private float currentScore;
+	private int totalLevels;
 
 	public bool gamePaused = false;
 	public bool levelSelect = false;
@@ -29,10 +30,7 @@ public class GameManager : MonoBehaviour
 		Cursor.lockState = CursorLockMode.Confined;
 		Cursor.visible = false;
 
-		if (energyBar != null)
-		{
-
-		}
+		totalLevels = Application.levelCount;
 	}
 	
 	// Update is called once per frame
@@ -124,6 +122,19 @@ public class GameManager : MonoBehaviour
 	{
 		ResumeGame ();
 		StartCoroutine (ChangeLevel(1));
+	}
+
+	public void LoadLevel (int index)
+	{
+		ResumeGame ();
+		StartCoroutine (ChangeLevel(index));
+	}
+
+	public void LoadNextLevel ()
+	{
+		int targetIndex = Application.loadedLevel + 1;
+		ResumeGame ();
+		StartCoroutine (ChangeLevel(targetIndex));
 	}
 
 	public void OpenSuccessScreen ()
