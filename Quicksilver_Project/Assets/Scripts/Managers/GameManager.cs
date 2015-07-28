@@ -28,6 +28,11 @@ public class GameManager : MonoBehaviour
 	{
 		Cursor.lockState = CursorLockMode.Confined;
 		Cursor.visible = false;
+
+		if (energyBar != null)
+		{
+
+		}
 	}
 	
 	// Update is called once per frame
@@ -55,7 +60,7 @@ public class GameManager : MonoBehaviour
 
 		currentScore = energyBar.GetComponent<GUIBarScript>().Value * 100;
 	}
-
+	
 	public void PauseGame ()
 	{
 		Time.timeScale = 0;

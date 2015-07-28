@@ -9,7 +9,15 @@ public class RobotEnergy : MonoBehaviour
 	public float flashSpeed = 5f;
 	public Image damageImage;
 	public GameObject energyBar;
+	public int dashCost;
+	public int attackCost;
+	public int shootCost;
+	public int shieldCost;
+	public int shrinkCost;
+	public int standardCost;
 	public Color damageColor = new Color(1f, 0f, 0f, 0.1f);
+
+
 	bool damaged;
 	bool isDead;
 	private GUIBarScript energyMeter;
@@ -18,8 +26,11 @@ public class RobotEnergy : MonoBehaviour
 	void Start () 
 	{
 		currentEnergy = startingEnergy;
-		energyMeter = energyBar.GetComponent<GUIBarScript>();
-		energyMeter.Value = (currentEnergy/100f);
+		if (energyBar != null)
+		{
+			energyMeter = energyBar.GetComponent<GUIBarScript>();
+			energyMeter.Value = (currentEnergy/100f);
+		}
 	}
 	
 	// Update is called once per frame
@@ -35,7 +46,10 @@ public class RobotEnergy : MonoBehaviour
 		}
 		damaged = false;
 
-		energyMeter.Value = (currentEnergy/100f);
+		if (energyBar != null)
+		{
+			energyMeter.Value = (currentEnergy/100f);
+		}
 	}
 
 	public void TakeDamage (int amount)
@@ -50,9 +64,60 @@ public class RobotEnergy : MonoBehaviour
 		}
 	}
 
+	public void StartEnergyDrain()
+	{
+		InvokeRepeating("StandardEnergyDrain", 5f, 3f);
+	}
+
+	public void StartShieldDrain()
+	{
+		InvokeRepeating("ShieldEnergyDrain", 0, 2f);
+	}
+
+	public void StopShieldDrain()
+	{
+		CancelInvoke("ShieldEnergyDrain");
+	}
+
+	public void StandardEnergyDrain()
+	{
+		DecreaseEnergy(standardCost);
+	}
+
+	public void ShieldEnergyDrain()
+	{
+		DecreaseEnergy(shieldCost);
+	}
+
 	public void IncreaseEnergy (int amount)
 	{
 		currentEnergy += amount;
+	}
+
+	public void DecreaseEnergy (int amount)
+	{
+		currentEnergy -= amount;
+	}
+
+	public void ShrinkEnergyCost()
+	{
+		DecreaseEnergy(shrinkCost);
+	}
+
+	public void DashEnergyCost()
+	{
+		DecreaseEnergy(dashCost);
+	}
+
+
+	public void ShootEnergyCost()
+	{
+		DecreaseEnergy(shootCost);
+	}
+
+	public void AttackEnergyCost()
+	{
+		DecreaseEnergy(attackCost);
 	}
 
 	void Death ()

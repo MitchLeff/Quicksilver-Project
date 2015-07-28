@@ -20,6 +20,7 @@ public class RobotUserControl : MonoBehaviour
     private RobotCharacter character; 
 	private RobotRagdoll ragdoll;
 	private RobotParticleManager particle;
+	private RobotEnergy energy;
 	private GameManager GM;
 	private GUIManager gui;
 	private IsometricCamera isoCam;
@@ -54,6 +55,7 @@ public class RobotUserControl : MonoBehaviour
         character = GetComponent<RobotCharacter>();
 		ragdoll = GetComponent<RobotRagdoll>();
 		particle = GetComponent<RobotParticleManager>();
+		energy = GetComponent<RobotEnergy>();
 		isoCam = Camera.main.GetComponent<IsometricCamera>();
 		GM = GameObject.Find("GameManager").GetComponent<GameManager>();
 		gui = GameObject.Find ("GUI").GetComponentInChildren<GUIManager>();
@@ -61,6 +63,7 @@ public class RobotUserControl : MonoBehaviour
 		guard = false;
 		leftTriggerReleased = true;
 		rightTriggerReleased = true;
+		energy.StartEnergyDrain();
     }
 
 
@@ -102,6 +105,7 @@ public class RobotUserControl : MonoBehaviour
 		{
 			dash = true;
 			gui.StartDashTimer();
+			energy.DashEnergyCost();
 		}
 		else if (!Input.GetButton("Dash"))
 		{
@@ -118,12 +122,14 @@ public class RobotUserControl : MonoBehaviour
 		{
 			attack = true;
 			gui.StartAttackCooldown();
+			energy.AttackEnergyCost();
 		}
 
 		if (Input.GetButtonDown ("Shoot") && gui.IsShootReady())
 		{
 			shoot = true;
 			gui.StartShootCooldown();
+			energy.ShootEnergyCost();
 		}
 
 		if (Input.GetButtonDown("SizeChange"))
@@ -132,6 +138,7 @@ public class RobotUserControl : MonoBehaviour
 			{
 				gui.StartShrinkTimer();
 				sizeChange = true;
+				energy.ShrinkEnergyCost();
 			}
 			else if (!character.normalSizedState)
 			{
@@ -192,7 +199,16 @@ public class RobotUserControl : MonoBehaviour
 			rightTriggerReleased = true;
 		}
 
-		guard = Input.GetButton("Guard");
+		if (Input.GetButton("Guard") && !guard)
+		{
+			guard = true;
+			energy.StartShieldDrain();
+		}
+		else if (!Input.GetButton("Guard") && guard)
+		{
+			guard = false;
+			energy.StopShieldDrain();
+		}
     }
 	
     private void FixedUpdate()
