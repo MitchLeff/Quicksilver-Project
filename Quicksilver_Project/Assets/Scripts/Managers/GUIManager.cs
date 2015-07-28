@@ -29,7 +29,7 @@ public class GUIManager : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
-		shrinkMeter = ShrinkMeterGUI.GetComponent<ProgressBarBehaviour>();
+		shrinkMeter = ShrinkMeterGUI.GetComponentInChildren<ProgressBarBehaviour>();
 		shrinkMeter.IncrementValue(100f);
 
 		dashButton = dashButtonGUI.GetComponentInChildren<ProgressRadialBehaviour>();

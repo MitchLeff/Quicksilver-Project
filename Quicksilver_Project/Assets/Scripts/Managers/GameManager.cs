@@ -58,7 +58,10 @@ public class GameManager : MonoBehaviour
 			}
 		}
 
-		currentScore = energyBar.GetComponent<GUIBarScript>().Value * 100;
+		if (energyBar != null)
+		{
+			currentScore = energyBar.GetComponent<GUIBarScript>().Value * 100;
+		}
 	}
 	
 	public void PauseGame ()

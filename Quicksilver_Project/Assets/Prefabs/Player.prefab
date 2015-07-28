@@ -2781,6 +2781,12 @@ MonoBehaviour:
   flashSpeed: 5
   damageImage: {fileID: 0}
   energyBar: {fileID: 0}
+  dashCost: 3
+  attackCost: 1
+  shootCost: 2
+  shieldCost: 1
+  shrinkCost: 3
+  standardCost: 1
   damageColor: {r: 1, g: 0, b: 0, a: .100000001}
 --- !u!114 &11473528
 MonoBehaviour:
