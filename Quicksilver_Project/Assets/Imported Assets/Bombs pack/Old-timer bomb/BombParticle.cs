@@ -28,7 +28,7 @@ public class BombParticle : MonoBehaviour {
 
 		if (collision.gameObject.tag == "Player") {
 			Debug.Log ("Bomb hurts player!");
-			//insert player damage code here
+			collision.gameObject.GetComponent<RobotEnergy>().TakeDamage(5);
 		}
 
 		if (collision.gameObject.tag == "Enemy") {
