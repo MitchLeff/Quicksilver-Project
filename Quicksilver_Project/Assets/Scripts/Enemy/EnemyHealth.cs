@@ -12,12 +12,15 @@ public class EnemyHealth : MonoBehaviour
 {
 
 	public int Health;
+	public int EnergyReward;
 
+	private RobotEnergy playerEnergy;
 	private Animator anim;
 	private AIRig ai;
 	private int startingHealth;
 	private CapsuleCollider col;
 	public GameObject DamageSmokePS;
+	private bool IsDead = false;
 
 	// Use this for initialization
 	void Start () 
@@ -26,6 +29,7 @@ public class EnemyHealth : MonoBehaviour
 		ai = GetComponentInChildren<AIRig>();
 		col = GetComponent<CapsuleCollider>();
 		startingHealth = Health;
+		playerEnergy = GameObject.Find("Player").GetComponent<RobotEnergy>();
 	}
 	
 	// Update is called once per frame
@@ -39,7 +43,7 @@ public class EnemyHealth : MonoBehaviour
 			ps.Play();
 		}
 
-		if (Health <= 0)
+		if (Health <= 0 && !IsDead)
 		{
 			Die ();
 		}
@@ -61,10 +65,12 @@ public class EnemyHealth : MonoBehaviour
 
 	public void Die ()
 	{
+		IsDead = true;
 		anim.SetBool("Death", true);
 		ai.enabled = false;
 		col.enabled = false;
 		DamageSmokePS.transform.position = this.transform.position;
+		playerEnergy.IncreaseEnergy(EnergyReward);
 		/*if (this.gameObject.name.Contains ("RegenWarrior")) {
 			Debug.Log("I live!");
 			Instantiate(this.gameObject, transform.position, transform.rotation);

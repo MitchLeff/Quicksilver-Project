@@ -487,6 +487,7 @@ GameObject:
   - 114: {fileID: 11466462}
   - 114: {fileID: 11456200}
   - 114: {fileID: 11485672}
+  - 114: {fileID: 11469874}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -2764,6 +2765,23 @@ MonoBehaviour:
   anim: {fileID: 0}
   col: {fileID: 0}
   isRagdollActive: 0
+--- !u!114 &11469874
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 138606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b6f918c18087f24e8fcdfcd205c291a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingEnergy: 50
+  currentEnergy: 0
+  flashSpeed: 5
+  damageImage: {fileID: 0}
+  energyBar: {fileID: 0}
+  damageColor: {r: 1, g: 0, b: 0, a: .100000001}
 --- !u!114 &11473528
 MonoBehaviour:
   m_ObjectHideFlags: 1
