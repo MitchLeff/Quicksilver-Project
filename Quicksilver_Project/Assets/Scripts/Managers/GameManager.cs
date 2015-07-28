@@ -132,7 +132,7 @@ public class GameManager : MonoBehaviour
 		PauseGame();
 		Cursor.lockState = CursorLockMode.Confined;
 		Cursor.visible = true;
-		currentScore = energyBar.GetComponent<GUIBarScript>().Value;
+		currentScore = energyBar.GetComponent<GUIBarScript>().Value * 100;
 		GameObject.Find ("Target_Text").GetComponent<Text>().text = "Target Score: " + targetScore;
 		GameObject.Find ("Actual_Text").GetComponent<Text>().text = "Current Score: " + currentScore;
 		energyBar.SetActive(false);
