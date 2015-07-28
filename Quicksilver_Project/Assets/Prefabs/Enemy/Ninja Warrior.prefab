@@ -596,6 +596,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &162380
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 468480}
+  - 65: {fileID: 6560018}
+  - 114: {fileID: 11486622}
+  m_Layer: 20
+  m_Name: AttackCollider
+  m_TagString: Enemy
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &163952
 GameObject:
   m_ObjectHideFlags: 1
@@ -628,7 +645,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &166390
 GameObject:
   m_ObjectHideFlags: 1
@@ -1068,7 +1085,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 129326}
-  m_LocalRotation: {x: -.659288943, y: .269359529, z: -.244414493, w: .658061624}
+  m_LocalRotation: {x: -.659288764, y: .269360065, z: -.244414523, w: .658061564}
   m_LocalPosition: {x: -.254474849, y: 1.90734859e-08, z: -2.28881831e-07}
   m_LocalScale: {x: 1.00000024, y: 1, z: 1.00000036}
   m_Children:
@@ -1223,6 +1240,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1.00000024, z: .999999821}
   m_Children:
   - {fileID: 420450}
+  - {fileID: 468480}
   m_Father: {fileID: 465964}
   m_RootOrder: 0
 --- !u!4 &450986
@@ -1390,6 +1408,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 470890}
   m_RootOrder: 0
+--- !u!4 &468480
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 162380}
+  m_LocalRotation: {x: 0, y: 0, z: .216439635, w: .976296008}
+  m_LocalPosition: {x: -.907999992, y: -.187999994, z: .0350000001}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 450124}
+  m_RootOrder: 1
 --- !u!4 &468554
 Transform:
   m_ObjectHideFlags: 1
@@ -1825,6 +1855,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .339116275, y: .45140776, z: .308665127}
   m_Center: {x: -.169558138, y: .0940615684, z: -.0279013515}
+--- !u!65 &6560018
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 162380}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: .100000001, z: .100000001}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &9572448
 Animator:
   serializedVersion: 3
@@ -1862,8 +1904,8 @@ MonoBehaviour:
       id="0"><field value="True" type="System.Boolean" id="_isActive" /><field type="UnityEngine.GameObject"
       id="_body" gameobject="0" /><field type="RAIN.Memory.BasicMemory" reference="1"
       id="_workingMemory" childrenvisible="False" /><field type="RAIN.Minds.BasicMind"
-      reference="2" id="_mind" childrenvisible="False" /><field type="RAIN.Motion.MecanimMotor"
-      reference="3" id="_motor" childrenvisible="True" /><field type="RAIN.Animation.MecanimAnimator"
+      reference="2" id="_mind" childrenvisible="True" /><field type="RAIN.Motion.MecanimMotor"
+      reference="3" id="_motor" childrenvisible="False" /><field type="RAIN.Animation.MecanimAnimator"
       reference="4" id="_animator" childrenvisible="False" /><field type="RAIN.Navigation.BasicNavigator"
       reference="5" id="_navigator" childrenvisible="False" /><field type="RAIN.Perception.BasicSenses"
       reference="6" id="_senses" childrenvisible="False" /><field type="System.Collections.Generic.List"
@@ -1875,7 +1917,7 @@ MonoBehaviour:
       type="System.Collections.Generic.List" id="_behaviorTreeBindings" elementtype="RAIN.BehaviorTrees.BTAssetBinding"
       /></reference><reference type="RAIN.Motion.MecanimMotor" refcount="1" id="3"><field
       value="1" type="System.Single" id="_speed" /><field value="360" type="System.Single"
-      id="_rotationSpeed" /><field value="0.1" type="System.Single" id="_closeEnoughDistance"
+      id="_rotationSpeed" /><field value="1" type="System.Single" id="_closeEnoughDistance"
       /><field value="0.1" type="System.Single" id="_closeEnoughAngle" /><field value="360"
       type="System.Single" id="_faceBeforeMoveAngle" /><field value="1" type="System.Single"
       id="_maxHeightOffset" /><field value="False" type="System.Boolean" id="_allow3DMovement"
@@ -2006,6 +2048,19 @@ MonoBehaviour:
   Health: 10
   EnergyReward: 10
   DamageSmokePS: {fileID: 104876}
+--- !u!114 &11486622
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 162380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7ffe6507523d8042bbfdabadfd16d05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 5
+  enemyParent: {fileID: 164978}
 --- !u!135 &13593918
 SphereCollider:
   m_ObjectHideFlags: 1
