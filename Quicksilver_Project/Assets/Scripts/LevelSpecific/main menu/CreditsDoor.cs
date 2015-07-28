@@ -26,7 +26,7 @@ public class CreditsDoor : MonoBehaviour
 	{
 		GameObject door = GameObject.FindGameObjectWithTag("Credits");
 		door.GetComponent<Animation>().Play("open");
-		StartCoroutine(gm.GetComponent<GameManager>().ChangeLevel(2));
+		StartCoroutine(gm.GetComponent<GameManager>().ChangeLevel(3));
 	}
 
 }
