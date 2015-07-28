@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
 	public GameObject pauseMenuPanel;
 	public GameObject resultsScreen;
 	public GameObject levelSelectMenuPanel;
+	public GameObject energyBar;
 
 	public bool gamePaused = false;
 	public bool levelSelect = false;
