@@ -7,6 +7,7 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour 
 {
@@ -15,6 +16,9 @@ public class GameManager : MonoBehaviour
 	public GameObject resultsScreen;
 	public GameObject levelSelectMenuPanel;
 	public GameObject energyBar;
+
+	public float targetScore;
+	private float currentScore;
 
 	public bool gamePaused = false;
 	public bool levelSelect = false;
@@ -48,7 +52,8 @@ public class GameManager : MonoBehaviour
 				}
 			}
 		}
-	
+
+		currentScore = energyBar.GetComponent<GUIBarScript>().Value * 100;
 	}
 
 	public void PauseGame ()
@@ -119,7 +124,24 @@ public class GameManager : MonoBehaviour
 		PauseGame();
 		Cursor.lockState = CursorLockMode.Confined;
 		Cursor.visible = true;
-		EventSystem.current.SetSelectedGameObject(GameObject.Find ("Results_Restart"));
+		GameObject.Find ("Target_Text").GetComponent<Text>().text = "Target Score: " + targetScore;
+		GameObject.Find ("Actual_Text").GetComponent<Text>().text = "Current Score: " + currentScore;
+		energyBar.SetActive(false);
+
+		if (currentScore >= targetScore)
+		{
+			GameObject.Find ("Result_Text").GetComponent<Text>().text = "Result: Success";
+			GameObject.Find ("Results_Next").SetActive(true);
+			EventSystem.current.SetSelectedGameObject(GameObject.Find ("Results_Next"));
+
+		}
+		else
+		{
+			GameObject.Find ("Result_Text").GetComponent<Text>().text = "Result: Failure";
+			GameObject.Find ("Results_Next").SetActive(false);
+			EventSystem.current.SetSelectedGameObject(GameObject.Find ("Results_Restart"));
+
+		}
 	}
 
 	public void ExitGame()

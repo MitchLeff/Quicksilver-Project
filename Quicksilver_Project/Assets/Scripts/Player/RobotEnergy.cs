@@ -58,6 +58,7 @@ public class RobotEnergy : MonoBehaviour
 	void Death ()
 	{
 		isDead = true;		
+		GameObject.Find("GameManager").GetComponent<GameManager>().OpenSuccessScreen();
 	}
 
 }
