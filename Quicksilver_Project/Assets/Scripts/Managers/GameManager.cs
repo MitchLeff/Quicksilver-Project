@@ -117,7 +117,7 @@ public class GameManager : MonoBehaviour
 	{
 		//EventSystem.current.SetSelectedGameObject(GameObject.Find ("Restart"));
 		ResumeGame ();
-		StartCoroutine(ChangeLevel(1));
+		StartCoroutine(ChangeLevel(Application.loadedLevel));
 	}
 
 	public void LoadLevel1 ()
