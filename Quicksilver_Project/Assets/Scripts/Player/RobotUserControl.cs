@@ -10,6 +10,7 @@
 
 using System;
 using UnityEngine;
+using RAIN.Entities;
 
 [RequireComponent(typeof (RobotCharacter))]
 [RequireComponent(typeof (RobotRagdoll))]
@@ -21,6 +22,7 @@ public class RobotUserControl : MonoBehaviour
 	private RobotRagdoll ragdoll;
 	private RobotParticleManager particle;
 	private RobotEnergy energy;
+	private EntityRig entity;
 	private GameManager GM;
 	private GUIManager gui;
 	private IsometricCamera isoCam;
@@ -59,6 +61,7 @@ public class RobotUserControl : MonoBehaviour
 		isoCam = Camera.main.GetComponent<IsometricCamera>();
 		GM = GameObject.Find("GameManager").GetComponent<GameManager>();
 		gui = GameObject.Find ("GUI").GetComponentInChildren<GUIManager>();
+		entity = GetComponentInChildren<EntityRig>();
 		crouch = false;
 		guard = false;
 		leftTriggerReleased = true;
@@ -73,6 +76,7 @@ public class RobotUserControl : MonoBehaviour
 		{
 			sizeChange = true;
 			gui.StartShrinkRecharge();
+			entity.enabled = true;
 		}
 
 		if (gui.IsDashOver())
@@ -139,11 +143,13 @@ public class RobotUserControl : MonoBehaviour
 				gui.StartShrinkTimer();
 				sizeChange = true;
 				energy.ShrinkEnergyCost();
+				entity.enabled = false;
 			}
 			else if (!character.normalSizedState)
 			{
 				gui.StartShrinkRecharge();
 				sizeChange = true;
+				entity.enabled = true;
 			}
 		}
 
@@ -203,11 +209,13 @@ public class RobotUserControl : MonoBehaviour
 		{
 			guard = true;
 			energy.StartShieldDrain();
+			entity.enabled = false;
 		}
 		else if (!Input.GetButton("Guard") && guard)
 		{
 			guard = false;
 			energy.StopShieldDrain();
+			entity.enabled = true;
 		}
     }
 	
