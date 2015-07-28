@@ -163,6 +163,7 @@ public class RobotParticleManager : MonoBehaviour
 		ps.Clear();
 		ps.Simulate(0.0001f, true, true);
 		ps.Play();
+		energyBulletPS.GetComponent<AudioSource>().Play();
 	}
 
 	public void ActivateSlashWaveEffect()
@@ -171,6 +172,7 @@ public class RobotParticleManager : MonoBehaviour
 		ps.Clear();
 		ps.Simulate(0.0001f, true, true);
 		ps.Play();
+		slashWavePS.GetComponent<AudioSource>().Play();
 	}
 
 
