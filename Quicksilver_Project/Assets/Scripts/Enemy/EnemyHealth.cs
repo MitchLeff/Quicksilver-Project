@@ -10,10 +10,10 @@ using RAIN.Core;
 
 public class EnemyHealth : MonoBehaviour 
 {
-
+	
 	public int Health;
 	public int EnergyReward;
-
+	
 	private RobotEnergy playerEnergy;
 	private Animator anim;
 	private AIRig ai;
@@ -21,7 +21,7 @@ public class EnemyHealth : MonoBehaviour
 	private CapsuleCollider col;
 	public GameObject DamageSmokePS;
 	private bool IsDead = false;
-
+	
 	// Use this for initialization
 	void Start () 
 	{
@@ -37,24 +37,24 @@ public class EnemyHealth : MonoBehaviour
 	{
 		ParticleSystem ps = DamageSmokePS.GetComponent<ParticleSystem>();
 		//Debug.Log (Health);
-
+		
 		if (Health <= startingHealth/2 && !ps.isPlaying)
 		{
 			ps.Play();
 		}
-
+		
 		if (Health <= 0 && !IsDead)
 		{
 			Die ();
 		}
-
+		
 		if (anim.GetCurrentAnimatorStateInfo(0).IsName("TurnOffAnimator"))
 		{
 			anim.enabled = false;
 			ps.Stop();
 		}
 	}
-
+	
 	public void TakeDamage (int amount)
 	{
 		Debug.Log ("Take Damage");
@@ -62,18 +62,23 @@ public class EnemyHealth : MonoBehaviour
 		anim.SetFloat("Speed", 0f);
 		anim.SetTrigger("HitTrigger");
 	}
-
+	
 	public void Die ()
 	{
+		if (this.gameObject.name.Contains ("Regen Warrior")) {
+			Debug.Log("I live!");
+			Health = 5;
+			EnergyReward = 0;
+			ParticleSystem ps = DamageSmokePS.GetComponent<ParticleSystem>();
+			ps.Stop();
+			anim.SetBool("Death", true);
+			return;
+		}
 		IsDead = true;
 		anim.SetBool("Death", true);
 		ai.enabled = false;
 		col.enabled = false;
 		DamageSmokePS.transform.position = this.transform.position;
 		playerEnergy.IncreaseEnergy(EnergyReward);
-		/*if (this.gameObject.name.Contains ("RegenWarrior")) {
-			Debug.Log("I live!");
-			Instantiate(this.gameObject, transform.position, transform.rotation);
-		}*/
 	}
 }
