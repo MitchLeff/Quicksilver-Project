@@ -746,6 +746,7 @@ GameObject:
   - 4: {fileID: 493576}
   - 198: {fileID: 19844360}
   - 199: {fileID: 19939756}
+  - 114: {fileID: 11454872}
   m_Layer: 0
   m_Name: SlashWavePS
   m_TagString: Untagged
@@ -2664,6 +2665,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 109e25c97354540d49f1e7878f85fd0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageAmount: 5
 --- !u!114 &11427114
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2723,6 +2725,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotateEverySecond: 1
+--- !u!114 &11454872
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 161950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbdf0789fdb600644a84a4779f190d70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 10
 --- !u!114 &11456200
 MonoBehaviour:
   m_ObjectHideFlags: 1

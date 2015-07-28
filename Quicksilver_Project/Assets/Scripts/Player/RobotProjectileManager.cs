@@ -9,6 +9,7 @@ using System.Collections;
 
 public class RobotProjectileManager : MonoBehaviour 
 {
+	public int damageAmount;
 
 	// Use this for initialization
 	void Start () 
@@ -27,7 +28,7 @@ public class RobotProjectileManager : MonoBehaviour
 		if (other.tag == "Enemy")
 		{
 			Debug.Log ("Enemy Hit");
-			other.GetComponent<EnemyHealth>().TakeDamage(5);
+			other.GetComponent<EnemyHealth>().TakeDamage(damageAmount);
 		}
 
 		if (other.tag == "Bomb")
