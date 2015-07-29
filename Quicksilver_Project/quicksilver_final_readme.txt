@@ -21,11 +21,32 @@ Email: mal8690@gmail.com
 Prism: mleff3
 
 ##### Requirements ##### 
-- (COMPLETE) 3D Game:
+- (COMPLETE) 3D Game: 
+	- (COMPLETE) 3D Game: The game is 3D in design
+	- (COMPLETE) Achievable objective: Reach the end of the level with enough energy to progress the game
+	- (COMPLETE) Communication of success or failure: Player dies if hit with no energy or player wins or loses after reaching the exit.  A screen will appear revealing to the player whether or not he succeeded in those two circumstances
+	- (COMPLETE) Able to reset on success or failure: Player is able to restart level at any time from mission result menu or pause menu.
 - (COMPLETE) Skeletal-Animated 3D Mesh Character Controller with Real-Time Control:
-- (COMPLETE) 3D World with Physics and Spatial Simulation
+	- (COMPLETE) Mecanim Controlled and Blendtree: Character has both features.
+	- (COMPLETE) Player has direct control: Yes, player has direct control.
+	- (COMPLETE) Appropriate controls:  Designed with the controller in mind.  Buttons chosen for easiest placement.
+	- (COMPLETE) Fluid: Player movement is fluid.
+	- (COMPLETE) Dynamic range of control: Many things are dynamic especially movement, jumping, and dashing which vary on how much you hold the input.
+- (COMPLETE) 3D World with Physics and Spatial Simulation:
+	- (COMPLETE) Graphically and auditory represented:  Graphics and audio designed with a 3D world in mind.
+	- (COMPLETE) Aligned with physics representation:  Clipping has been minimized as much as possible.
+	- (COMPLETE) Interactive:  Several interactive environments and objects such as breakable glass, exploding bombs, and pushable crates.
+	- (COMPLETE) Consistent spatial simulation: Distance and movement is consistent in all areas.
 - (COMPLETE) Real-Time NPC Steering Behaviours / Artificial Intelligence:
+	- (COMPLETE) Reasonably effective and believable:  AI designed with simple effective patrols and simple effective targeting scripts.
+	- (COMPLETE) Fluid: AI moves fluid through level through use of mecanim and RAIN
+	- (COMPLETE) Sensory feedback of AI:  Audio effects placed on AI when they attack or die.  Visibly agressive when they see you.
 - (COMPLETE) Polish:
+	- (COMPLETE) UI: Software feels like a game from beginning to end. Several HUD elements in play that affect gameplay.  Menus interactive and navigable.  Transitions present on level loads.
+	- (COMPLETE) Environment Acknowledges Player: Several elements acknowledge player interactions through use of scripting, animation, sound, and effects.
+	- (COMPLETE) Cohesiveness / Unified:  Simple artistic style used throughout.  Consistent level design.  Sound theme is similair throughout game.
+	- (COMPLETE) Appeal:  All discoverable and fixable glitches removed.  Game contains proper barriers and is stable.
+- (COMPLETE) Fun:  Game is fun and challenging.  Several levels provided that provide the player chances to improve their skill.
 
 ##### Resources Used by Group ##### 
 - Asset: Standard Assets by Unity Technologies
@@ -133,7 +154,6 @@ Prism: mleff3
 Use standard build settings for Web Player. Ensure all five scenes (quicksilver_title.unity, quicksilver_level1.unity, quicksilver_level2.unity, quicksilver_level3.unity, and quicksilver_credits.unity) are included in build.
 
 ##### Grader Instructions #####
-## Group Component ## 
 - Controls:
 	- Recommended input is a XBOX 360 Controller 
 	- Walk/Run: WASD / Leftstick on Gamepad (Character will turn towards the direction of the keypress relative to the camera as he moves)
