@@ -202,12 +202,24 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Background Music:
 
-    Day 69, Day 60, and Day 23  (Mark Sparling)
+    Day 69, Day 60, Day 50, Day 34, and Day 23  (Mark Sparling)
 
 
     Sound Effects:
 
-    Universal Sound FX (Imphenzia)'
+    Universal Sound FX (Imphenzia)
+
+    Explosion_001.mp3 (cydon)
+
+    Glass bag drops.wav  (LampEight)
+
+    Patrick''s Grunt.wav  (AMVAclasssounds)
+
+    punch.wav (Ekokubza123)
+
+    sword04.wav (Erdie)
+
+'
 --- !u!222 &55733653
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -286,9 +298,7 @@ MonoBehaviour:
 
     AI Design
 
-    Game Design
-
-    Sound Effects'
+    Game Design'
 --- !u!222 &175301505
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1311,7 +1321,11 @@ MonoBehaviour:
 
     2D Platformer + Free 2D Assets Pack (Brackeys)
 
-'
+    Progress Bar Scripts (Eri)
+
+    Gradient GUI Bars (JustinGarza)
+
+    Breaking Glass - Unity C# Tutorial  (Peer Play)'
 --- !u!222 &1052788419
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1564,6 +1578,10 @@ MonoBehaviour:
 
     Introduction to New UI  (3D Buzz)
 
+    Progress Bar Scripts (Eri)
+
+    Gradient GUI Bars (JustinGarza)
+
 
     Models and Animation:
 
@@ -1576,6 +1594,12 @@ MonoBehaviour:
     Maze element Ice Golem by Andres Olivella
 
     Standard Assets (Unity Technologies)
+
+    Mobile Powerups Free Vol. 1 (VisCircle)
+
+    Yughues Free Bombs  (Nobiax/Yughues)
+
+    Breaking Glass - Unity C# Tutorial  (Peer Play)
 
 
     Textures and Materials:
@@ -2367,6 +2391,8 @@ MonoBehaviour:
 
     Logo Design
 
+    Level Design
+
     Background Music
 
     GUI Design
@@ -2375,7 +2401,9 @@ MonoBehaviour:
 
     Programmer
 
-    Game Design'
+    Game Design
+
+    Sound Effects'
 --- !u!222 &2103982048
 CanvasRenderer:
   m_ObjectHideFlags: 0

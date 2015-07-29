@@ -98,7 +98,7 @@ Prism: mleff3
 - License URL: http://creativecommons.org/licenses/by/3.0/legalcode
 - Usage: Used as main font throughout game
 
-- Asset: Day 69, Day 60, Day 23 by Mark Sparling
+- Asset: Day 69, Day 60, Day 23, Day 50, Day 34 by Mark Sparling
 - URL: http://www.marksparling.com/
 - Usage: These royalty-free songs were used for the in-game background music
 
