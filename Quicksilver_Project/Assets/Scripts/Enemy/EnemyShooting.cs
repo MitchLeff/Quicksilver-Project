@@ -11,6 +11,7 @@ using System.Collections;
 public class EnemyShooting : MonoBehaviour 
 {
 	public Vector3 targetPosition;
+	public GameObject particleBlast;
 
 	LineRenderer attackLine;
 	Animator anim;
@@ -42,8 +43,14 @@ public class EnemyShooting : MonoBehaviour
 
 	void Shoot ()
 	{
-		attackLine.enabled = true;
-		attackLine.SetPosition (0, transform.position + new Vector3(0f, 2.5f, 0f));
-		attackLine.SetPosition (1, targetPosition);
+//		attackLine.enabled = true;
+//		attackLine.SetPosition (0, transform.position + new Vector3(0f, 2.5f, 0f));
+//		attackLine.SetPosition (1, targetPosition);
+		particleBlast.transform.LookAt(GameObject.Find ("Player").transform.position + new Vector3(0, 1.5f, 0));
+		ParticleSystem ps = particleBlast.GetComponent<ParticleSystem>();
+		ps.Clear();
+		ps.Simulate(0.0001f, true, true);
+		ps.Play();
+
 	}
 }

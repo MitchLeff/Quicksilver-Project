@@ -55,6 +55,7 @@
      <Compile Include="Assets\Imported Assets\FX Mega Pack 2\Scripts\SmoothCameraOrbit.cs" />
      <Compile Include="Assets\Imported Assets\Glass\_Scripts\GlassBreak.cs" />
      <Compile Include="Assets\Imported Assets\Mixamo\Magic Pack\Demo\CameraScroll.cs" />
+     <Compile Include="Assets\Imported Assets\PowerUps Vol 1 Free\BatteryPickup.cs" />
      <Compile Include="Assets\ProgressBar\Script\ProgressBarBehaviour.cs" />
      <Compile Include="Assets\ProgressBar\Script\ProgressRadialBehaviour.cs" />
      <Compile Include="Assets\ProgressBar\Script\Utils.cs" />
@@ -63,6 +64,7 @@
      <Compile Include="Assets\Scripts\Enemy\DetermineTargetLocation.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyHealth.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyMelee.cs" />
+     <Compile Include="Assets\Scripts\Enemy\EnemyProjectileManager.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyShooting.cs" />
      <Compile Include="Assets\Scripts\LevelSpecific\main menu\CreditsDoor.cs" />
      <Compile Include="Assets\Scripts\LevelSpecific\main menu\ExitDoor.cs" />
