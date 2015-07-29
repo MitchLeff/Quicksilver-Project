@@ -170,7 +170,13 @@ Use standard build settings for Web Player. Ensure all five scenes (quicksilver_
 	- Camera Change: Left/Right Trigger to change viewpoint
 
 - Viewing Requirements:
+Start the game in the main menu.  Proceed to the NEW GAME door in front of character.  This will load the first level which is a tutorial level.  The walls have instructions to new players to demonstrate the basic gameplay of the game.  Reach the end of the stage.  You should have enough energy to proceed to next stage.  If not, restart the level.  Select NEXT LEVEL to proceed to Level 2.
 
+In Level 2, there are several enemies and interactable objects.  Explore and try to interact with everything as you try to reach the end of the level.  This level has one of each of the AI.  Try using a variety of slash attacks and shoot attacks to defeat them.  Or use the shield guard or shrink to avoid detection.  Collect batteries in the level for energy boosts.  Navigate to the end with enough energy to beat the stage.  The target energy for this stage is 70.  After winning, proceed to Level 3.
+
+In Level 3, ....
+
+Upon completion of Level 3, selecting NEXT LEVEL will take you to the credits.  Exiting the credits or leaving them alone will take you back to the title screen.  Feel free to use Level Select to play any of the three stages.
 
 ##### Unity Scene #####
 The main file used is quicksilver_title.unity.
