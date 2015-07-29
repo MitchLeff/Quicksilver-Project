@@ -16,7 +16,7 @@ public class BombParticle : MonoBehaviour {
 		if (time < 0f) {
 			canCollide = false;
 		}
-		if (time < -7f) {
+		if (time < -3f) {
 			Destroy(gameObject);
 		}
 	}

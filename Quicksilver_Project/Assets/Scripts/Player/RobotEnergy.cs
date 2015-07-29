@@ -64,6 +64,11 @@ public class RobotEnergy : MonoBehaviour
 		}
 	}
 
+	public void AddEnergy (int amount)
+	{
+		currentEnergy += amount;
+	}
+
 	public void StartEnergyDrain()
 	{
 		InvokeRepeating("StandardEnergyDrain", 5f, 3f);
