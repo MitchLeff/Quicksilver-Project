@@ -66,6 +66,7 @@
      <Compile Include="Assets\Scripts\Enemy\EnemyMelee.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyProjectileManager.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyShooting.cs" />
+     <Compile Include="Assets\Scripts\Kill.cs" />
      <Compile Include="Assets\Scripts\LevelSpecific\main menu\CreditsDoor.cs" />
      <Compile Include="Assets\Scripts\LevelSpecific\main menu\ExitDoor.cs" />
      <Compile Include="Assets\Scripts\LevelSpecific\main menu\LevelSelectDoor.cs" />
