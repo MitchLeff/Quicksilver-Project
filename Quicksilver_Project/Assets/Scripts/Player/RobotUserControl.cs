@@ -76,7 +76,7 @@ public class RobotUserControl : MonoBehaviour
 		{
 			sizeChange = true;
 			gui.StartShrinkRecharge();
-			entity.enabled = true;
+			entity.Entity.DeactivateEntity();
 		}
 
 		if (gui.IsDashOver())
@@ -149,7 +149,7 @@ public class RobotUserControl : MonoBehaviour
 			{
 				gui.StartShrinkRecharge();
 				sizeChange = true;
-				entity.enabled = true;
+				entity.Entity.ActivateEntity();
 			}
 		}
 
@@ -209,13 +209,13 @@ public class RobotUserControl : MonoBehaviour
 		{
 			guard = true;
 			energy.StartShieldDrain();
-			entity.enabled = false;
+			entity.Entity.DeactivateEntity();
 		}
 		else if (!Input.GetButton("Guard") && guard)
 		{
 			guard = false;
 			energy.StopShieldDrain();
-			entity.enabled = true;
+			entity.Entity.ActivateEntity();
 		}
     }
 	
