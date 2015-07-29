@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 403622}
   - 198: {fileID: 19833906}
   - 199: {fileID: 19903972}
+  - 82: {fileID: 8282214}
   m_Layer: 19
   m_Name: DamageSmokePS
   m_TagString: Untagged
@@ -639,7 +640,6 @@ GameObject:
   - 95: {fileID: 9572448}
   - 136: {fileID: 13694808}
   - 114: {fileID: 11464218}
-  - 82: {fileID: 8292912}
   - 82: {fileID: 8264590}
   m_Layer: 19
   m_Name: Ninja Warrior
@@ -1938,16 +1938,16 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
---- !u!82 &8292912
+--- !u!82 &8282214
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 164978}
+  m_GameObject: {fileID: 104876}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d346daa8129db3a46abeccb38c4c93b1, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f5e036e227794be4cac646076e7e2fad, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
