@@ -98,7 +98,7 @@ Prism: mleff3
 - License URL: http://creativecommons.org/licenses/by/3.0/legalcode
 - Usage: Used as main font throughout game
 
-- Asset: Day 69, Day 60, Day 23, Day 50, Day 34 by Mark Sparling
+- Asset: Day 69, Day 60, Day 23, Day 50, Day 34, Day 67 by Mark Sparling
 - URL: http://www.marksparling.com/
 - Usage: These royalty-free songs were used for the in-game background music
 
@@ -150,12 +150,12 @@ Prism: mleff3
 - URL: https://www.freesound.org/people/Erdie/sounds/27858/
 - Usage: Used for ninja attack sound
 
-- Asset: Health pickup sound
-- URL: bfxr.org
+- Asset: Health pickup sound by increpare
+- URL: bfxr.net
 - Usage: Used for battery
 
-- Asset: Enemy laser sound
-- URL: bfxr.org
+- Asset: Enemy laser sound by increpare
+- URL: bfxr.net
 - Usage: Used for ranged enemies
 
 ##### Build Instructions ##### 

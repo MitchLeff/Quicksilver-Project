@@ -202,7 +202,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Background Music:
 
-    Day 69, Day 60, Day 50, Day 34, and Day 23  (Mark Sparling)
+    Day 69, Day 60, Day 50, Day 34, Day 67,and Day 23  (Mark Sparling)
 
 
     Sound Effects:
@@ -219,7 +219,9 @@ MonoBehaviour:
 
     sword04.wav (Erdie)
 
-'
+    Health pickup sound  (increpare)
+
+    Enemy laser sound (increpare)'
 --- !u!222 &55733653
 CanvasRenderer:
   m_ObjectHideFlags: 0
