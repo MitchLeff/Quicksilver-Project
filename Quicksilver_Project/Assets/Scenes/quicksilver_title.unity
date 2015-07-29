@@ -8429,6 +8429,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11477754, guid: a5bea63b65ab341f1913b4cefd41a7a8, type: 2}
+      propertyPath: m_Navigation.m_SelectOnDown
+      value: 
+      objectReference: {fileID: 1817605234}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a5bea63b65ab341f1913b4cefd41a7a8, type: 2}
   m_IsPrefabParent: 0
@@ -9633,12 +9637,6 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 4ee8dd48bd08a7640ae21344d260ca59, type: 2}
   m_PrefabInternal: {fileID: 667111820}
---- !u!114 &669106808 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11457236, guid: a5bea63b65ab341f1913b4cefd41a7a8,
-    type: 2}
-  m_PrefabInternal: {fileID: 596620465}
-  m_Script: {fileID: 1392445389, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1 &673320548 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 131974, guid: a5bea63b65ab341f1913b4cefd41a7a8, type: 2}
@@ -14509,6 +14507,12 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: e1cd84792cb8f274cbb62478b3297a5a, type: 2}
   m_PrefabInternal: {fileID: 934594978}
+--- !u!114 &937982242 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11477754, guid: a5bea63b65ab341f1913b4cefd41a7a8,
+    type: 2}
+  m_PrefabInternal: {fileID: 596620465}
+  m_Script: {fileID: 1392445389, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1001 &940756322
 Prefab:
   m_ObjectHideFlags: 0
@@ -29719,7 +29723,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 4
-    m_SelectOnUp: {fileID: 669106808}
+    m_SelectOnUp: {fileID: 937982242}
     m_SelectOnDown: {fileID: 873713164}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}

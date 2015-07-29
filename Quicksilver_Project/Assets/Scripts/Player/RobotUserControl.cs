@@ -76,7 +76,7 @@ public class RobotUserControl : MonoBehaviour
 		{
 			sizeChange = true;
 			gui.StartShrinkRecharge();
-			entity.Entity.DeactivateEntity();
+			entity.Entity.ActivateEntity();
 		}
 
 		if (gui.IsDashOver())
@@ -117,10 +117,10 @@ public class RobotUserControl : MonoBehaviour
 			gui.StartDashRecharge();
 		}
 
-		if (Input.GetButtonDown("Crouch"))
-		{
-			crouch = !crouch;
-		}
+//		if (Input.GetButtonDown("Crouch"))
+//		{
+//			crouch = !crouch;
+//		}
 
 		if (Input.GetButtonDown("Attack") && gui.IsAttackReady())
 		{
@@ -143,7 +143,7 @@ public class RobotUserControl : MonoBehaviour
 				gui.StartShrinkTimer();
 				sizeChange = true;
 				energy.ShrinkEnergyCost();
-				entity.enabled = false;
+				entity.Entity.DeactivateEntity();
 			}
 			else if (!character.normalSizedState)
 			{

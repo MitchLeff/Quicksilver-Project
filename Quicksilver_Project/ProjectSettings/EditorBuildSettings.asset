@@ -12,6 +12,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/quicksilver_level2.unity
   - enabled: 1
+    path: Assets/Scenes/quicksilver_level3.unity
+  - enabled: 1
     path: Assets/Scenes/quicksilver_credits.unity
   - enabled: 1
     path: Assets/Scenes/quicksilver_level3.unity
