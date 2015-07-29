@@ -384,7 +384,6 @@ GameObject:
   - 95: {fileID: 9500470}
   - 136: {fileID: 13637808}
   - 114: {fileID: 11434894}
-  - 82: {fileID: 8203906}
   - 82: {fileID: 8208182}
   m_Layer: 0
   m_Name: Regen Warrior
@@ -962,7 +961,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 184228}
   m_LocalRotation: {x: -.49999997, y: .50000006, z: .50000006, w: .49999997}
-  m_LocalPosition: {x: -45.7000008, y: 0, z: -29.2000008}
+  m_LocalPosition: {x: 0, y: .879999995, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 497258}
@@ -1858,75 +1857,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .605963349, y: .321947753, z: .356535941}
   m_Center: {x: -.302981496, y: .0949075744, z: .19412756}
---- !u!82 &8203906
-AudioSource:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 148842}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 785b200f98d4b6d45afe846d10ebd08f, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
 --- !u!82 &8208182
 AudioSource:
   m_ObjectHideFlags: 1
@@ -2095,7 +2025,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Health: 10
   EnergyReward: 15
-  DamageSmokePS: {fileID: 0}
+  DamageSmokePS: {fileID: 184228}
 --- !u!114 &11459140
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2130,10 +2060,10 @@ MonoBehaviour:
       id="_body" gameobject="0" /><field type="RAIN.Memory.BasicMemory" reference="1"
       id="_workingMemory" childrenvisible="False" /><field type="RAIN.Minds.BasicMind"
       reference="2" id="_mind" childrenvisible="False" /><field type="RAIN.Motion.MecanimMotor"
-      reference="3" id="_motor" childrenvisible="False" /><field type="RAIN.Animation.MecanimAnimator"
+      reference="3" id="_motor" childrenvisible="True" /><field type="RAIN.Animation.MecanimAnimator"
       reference="4" id="_animator" childrenvisible="False" /><field type="RAIN.Navigation.BasicNavigator"
       reference="5" id="_navigator" childrenvisible="False" /><field type="RAIN.Perception.BasicSenses"
-      reference="6" id="_senses" childrenvisible="True" /><field type="System.Collections.Generic.List"
+      reference="6" id="_senses" childrenvisible="False" /><field type="System.Collections.Generic.List"
       id="_customElements" elementtype="RAIN.Core.CustomAIElement" childrenvisible="False"
       /></reference><reference type="RAIN.Memory.BasicMemory" refcount="1" id="1"><field
       type="System.Collections.Generic.List" id="_memoryItems" elementtype="RAIN.Memory.BasicMemory+MemoryItem"

@@ -906,7 +906,7 @@ AnimatorStateTransition:
   m_TransitionDuration: .100000001
   m_TransitionOffset: 0
   m_ExitTime: .899999976
-  m_HasExitTime: 0
+  m_HasExitTime: 1
   m_HasFixedDuration: 0
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -1508,10 +1508,10 @@ AnimatorStateMachine:
   m_EntryTransitions: []
   m_StateMachineTransitions:
     data:
-      first: {fileID: 110719200}
+      first: {fileID: 110784250}
       second: []
     data:
-      first: {fileID: 110784250}
+      first: {fileID: 110719200}
       second: []
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 60, y: -48, z: 0}
