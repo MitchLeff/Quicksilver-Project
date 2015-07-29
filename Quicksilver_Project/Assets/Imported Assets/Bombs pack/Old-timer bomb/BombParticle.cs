@@ -28,12 +28,12 @@ public class BombParticle : MonoBehaviour {
 
 		if (collision.gameObject.tag == "Player") {
 			Debug.Log ("Bomb hurts player!");
-			collision.gameObject.GetComponent<RobotEnergy>().TakeDamage(5);
+			collision.gameObject.GetComponent<RobotEnergy>().TakeDamage(10);
 		}
 
 		if (collision.gameObject.tag == "Enemy") {
 			Debug.Log ("Bomb hurts enemy!");
-			collision.gameObject.GetComponent<EnemyHealth>().TakeDamage(5);
+			collision.gameObject.GetComponent<EnemyHealth>().TakeDamage(20);
 		}
 
 		if (collision.gameObject.tag == "Glass")

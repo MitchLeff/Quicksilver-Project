@@ -8,8 +8,14 @@ public class GlassBreak : MonoBehaviour
 	public Transform brokenObject;
 	public float magnitudeCol, radius, power, upwards;
 
-	void OnCollisionEnter(Collision collision)
+	void OnCollisionEnter(Collision collision) {
+		OnCollisionStay (collision);
+	}
+
+	void OnCollisionStay(Collision collision)
 	{
+
+		//if (collision.gameObject.tag == "Player" && (collision.relativeVelocity.magnitude > magnitudeCol || ((collision.gameObject.GetComponent<Animator> ().GetCurrentAnimatorStateInfo (0).IsName ("Dash")) && collision.relativeVelocity.magnitude > 6f)));
 		if (collision.gameObject.tag == "Player" && collision.relativeVelocity.magnitude > magnitudeCol)
 		{
 			Destroy(gameObject);
