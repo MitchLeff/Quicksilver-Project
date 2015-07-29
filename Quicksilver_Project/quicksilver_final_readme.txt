@@ -150,6 +150,14 @@ Prism: mleff3
 - URL: https://www.freesound.org/people/Erdie/sounds/27858/
 - Usage: Used for ninja attack sound
 
+- Asset: Health pickup sound
+- URL: bfxr.org
+- Usage: Used for battery
+
+- Asset: Enemy laser sound
+- URL: bfxr.org
+- Usage: Used for ranged enemies
+
 ##### Build Instructions ##### 
 Use standard build settings for Web Player. Ensure all five scenes (quicksilver_title.unity, quicksilver_level1.unity, quicksilver_level2.unity, quicksilver_level3.unity, and quicksilver_credits.unity) are included in build.
 
@@ -190,7 +198,7 @@ In the first level, the walls have instructions to new players to demonstrate th
 
 In Level 2, there are several enemies and interactable objects.  Explore and try to interact with everything as you try to reach the end of the level.  This level has one of each of the AI.  Try using a variety of slash attacks and shoot attacks to defeat them.  Or use the shield guard or shrink to avoid detection.  Collect batteries in the level for energy boosts.  Navigate to the end with enough energy to beat the stage.  The target energy for this stage is 70.  After winning, proceed to Level 3.
 
-In Level 3, ....
+In Level 3, the difficulty is much higher. The goal is the same as previous levels, but there are more enemies. The ranged enemies here are stationary (if they weren't, the level would be too hard). Remember that dashing breaks glass and that bombs go off by shooting at them (or by moving into them, but you should avoid that because you take massive damage). Exploding bombs also destroy glass and hurt enemies. Use this to your advantage. The very end of the level faces you off against a beefed up giant enemy. Defeating him is optional. Note there is an alternate route a player can take to reach the end of the level. That requires some clever movement on your initial jump down. (Hint: Try not the break the first pane of glass you see.)
 
 Upon completion of Level 3, selecting NEXT LEVEL will take you to the credits.  Exiting the credits or leaving them alone will take you back to the title screen.  Feel free to use Level Select to play any of the three stages.
 
