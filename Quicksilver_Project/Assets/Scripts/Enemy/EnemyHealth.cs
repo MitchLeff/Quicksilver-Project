@@ -88,6 +88,7 @@ public class EnemyHealth : MonoBehaviour
 		ai.enabled = false;
 		col.enabled = false;
 		DamageSmokePS.transform.position = this.transform.position;
+		DamageSmokePS.GetComponent<AudioSource>().Play();
 		playerEnergy.IncreaseEnergy(EnergyReward);
 	}
 }

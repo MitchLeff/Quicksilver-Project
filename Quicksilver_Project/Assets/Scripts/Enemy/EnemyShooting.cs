@@ -15,6 +15,7 @@ public class EnemyShooting : MonoBehaviour
 
 	LineRenderer attackLine;
 	Animator anim;
+	bool attackReady;
 
 	// Use this for initialization
 	void Start () 
@@ -26,13 +27,15 @@ public class EnemyShooting : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		if (anim.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
+		if (anim.GetCurrentAnimatorStateInfo(0).IsName("Attack") && attackReady)
 		{
 			Shoot ();
+			attackReady = false;
 		}
-		else
+		else if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
 		{
 			DisableEffects ();
+			attackReady = true;
 		}
 	}
 
@@ -51,6 +54,7 @@ public class EnemyShooting : MonoBehaviour
 		ps.Clear();
 		ps.Simulate(0.0001f, true, true);
 		ps.Play();
+		particleBlast.GetComponent<AudioSource>().Play();
 
 	}
 }

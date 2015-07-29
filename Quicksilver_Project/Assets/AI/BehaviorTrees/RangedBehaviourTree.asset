@@ -83,9 +83,7 @@ MonoBehaviour:
       /&gt;&lt;mecparam valueexpression=&quot;True&quot; repeatuntil=&quot;&quot;
       priority=&quot;&quot; parametertype=&quot;trigger&quot; parametername=&quot;Attack1Trigger&quot;
       name=&quot;Attack animate&quot; debugbreak=&quot;False&quot; damptime=&quot;0&quot;
-      /&gt;&lt;audio waituntildone=&quot;False&quot; repeatuntil=&quot;&quot; priority=&quot;&quot;
-      name=&quot;audio&quot; forcestoponexit=&quot;False&quot; delay=&quot;0&quot;
-      debugbreak=&quot;False&quot; audiosource=&quot;LaserAttack&quot; /&gt;&lt;/sequencer&gt;&lt;/constraint&gt;&lt;/constraint&gt;&lt;/selector&gt;&lt;/parallel&gt;&lt;/behaviortree&gt;"
+      /&gt;&lt;/sequencer&gt;&lt;/constraint&gt;&lt;/constraint&gt;&lt;/selector&gt;&lt;/parallel&gt;&lt;/behaviortree&gt;"
       type="System.String" id="treeData" /><field type="System.Array" id="treeBindings"
       elementtype="System.String" /></fields><references /></scriptableobject>
     _serializedGameObjects: []
