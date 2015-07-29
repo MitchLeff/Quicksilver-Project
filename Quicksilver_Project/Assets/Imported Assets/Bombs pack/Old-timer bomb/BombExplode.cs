@@ -11,4 +11,11 @@ public class BombExplode : MonoBehaviour
 		Destroy (gameObject);
 		Instantiate (explodeObject, transform.position, transform.rotation);
 	}
+
+	void OnCollisionEnter(Collision collision)
+	{
+		if (collision.gameObject.tag == "Player") {
+			Explode ();
+		}
+	}
 }
