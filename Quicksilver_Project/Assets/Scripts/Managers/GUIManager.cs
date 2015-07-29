@@ -11,17 +11,17 @@ public class GUIManager : MonoBehaviour
 	public GameObject shootButtonGUI;
 	public GameObject jumpButtonGUI;
 
-	public float shrinkProgressSpeed;
+	public int shrinkProgressSpeed;
 	public float dashProgressSpeed;
 	public float attackProgressSpeed;
 	public float shootProgressSpeed;
 	public float jumpProgressSpeed;
 
-	private ProgressBarBehaviour shrinkMeter;
-	private ProgressRadialBehaviour dashButton;
-	private ProgressRadialBehaviour attackButton;
-	private ProgressRadialBehaviour shootButton;
-	private ProgressRadialBehaviour jumpButton;
+	public ProgressBarBehaviour shrinkMeter;
+	public ProgressRadialBehaviour dashButton;
+	public ProgressRadialBehaviour attackButton;
+	public ProgressRadialBehaviour shootButton;
+	public ProgressRadialBehaviour jumpButton;
 
 	private bool jumpAvailable = true;
 
@@ -29,8 +29,6 @@ public class GUIManager : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
-		shrinkMeter = ShrinkMeterGUI.GetComponentInChildren<ProgressBarBehaviour>();
-		shrinkMeter.IncrementValue(100f);
 
 		dashButton = dashButtonGUI.GetComponentInChildren<ProgressRadialBehaviour>();
 		dashButton.ProgressSpeed = dashProgressSpeed;
@@ -47,6 +45,11 @@ public class GUIManager : MonoBehaviour
 		jumpButton = jumpButtonGUI.GetComponentInChildren<ProgressRadialBehaviour>();
 		jumpButton.ProgressSpeed = jumpProgressSpeed;
 		jumpButton.IncrementValue(100f);
+
+		shrinkMeter = ShrinkMeterGUI.GetComponent<ProgressBarBehaviour>();
+		shrinkMeter.ProgressSpeed = shrinkProgressSpeed;
+		shrinkMeter.IncrementValue(100f);
+
 	}
 	
 	// Update is called once per frame
