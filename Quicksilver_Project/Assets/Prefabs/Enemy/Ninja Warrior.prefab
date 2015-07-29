@@ -640,6 +640,7 @@ GameObject:
   - 136: {fileID: 13694808}
   - 114: {fileID: 11464218}
   - 82: {fileID: 8292912}
+  - 82: {fileID: 8264590}
   m_Layer: 19
   m_Name: Ninja Warrior
   m_TagString: Enemy
@@ -1868,6 +1869,75 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.5, y: .100000001, z: .100000001}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!82 &8264590
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 164978}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: d346daa8129db3a46abeccb38c4c93b1, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!82 &8292912
 AudioSource:
   m_ObjectHideFlags: 1
@@ -1974,11 +2044,11 @@ MonoBehaviour:
       id="0"><field value="True" type="System.Boolean" id="_isActive" /><field type="UnityEngine.GameObject"
       id="_body" gameobject="0" /><field type="RAIN.Memory.BasicMemory" reference="1"
       id="_workingMemory" childrenvisible="False" /><field type="RAIN.Minds.BasicMind"
-      reference="2" id="_mind" childrenvisible="True" /><field type="RAIN.Motion.MecanimMotor"
+      reference="2" id="_mind" childrenvisible="False" /><field type="RAIN.Motion.MecanimMotor"
       reference="3" id="_motor" childrenvisible="False" /><field type="RAIN.Animation.MecanimAnimator"
       reference="4" id="_animator" childrenvisible="False" /><field type="RAIN.Navigation.BasicNavigator"
       reference="5" id="_navigator" childrenvisible="False" /><field type="RAIN.Perception.BasicSenses"
-      reference="6" id="_senses" childrenvisible="False" /><field type="System.Collections.Generic.List"
+      reference="6" id="_senses" childrenvisible="True" /><field type="System.Collections.Generic.List"
       id="_customElements" elementtype="RAIN.Core.CustomAIElement" childrenvisible="False"
       /></reference><reference type="RAIN.Memory.BasicMemory" refcount="1" id="1"><field
       type="System.Collections.Generic.List" id="_memoryItems" elementtype="RAIN.Memory.BasicMemory+MemoryItem"

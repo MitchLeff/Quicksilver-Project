@@ -21,7 +21,7 @@ public class EnemyHealth : MonoBehaviour
 	private CapsuleCollider col;
 	public GameObject DamageSmokePS;
 	private bool IsDead = false;
-	
+	private bool invincilbe = false;
 	// Use this for initialization
 	void Start () 
 	{
@@ -53,14 +53,23 @@ public class EnemyHealth : MonoBehaviour
 			anim.enabled = false;
 			ps.Stop();
 		}
+
+		if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Hit"))
+		{
+			invincilbe = false;
+		}
 	}
 	
 	public void TakeDamage (int amount)
 	{
-		Debug.Log ("Take Damage");
-		Health = Health - amount;
-		anim.SetFloat("Speed", 0f);
-		anim.SetTrigger("HitTrigger");
+		if (!invincilbe)
+		{
+			Debug.Log ("Take Damage");
+			Health = Health - amount;
+			anim.SetFloat("Speed", 0f);
+			anim.SetTrigger("HitTrigger");
+			invincilbe = true;
+		}
 	}
 	
 	public void Die ()
