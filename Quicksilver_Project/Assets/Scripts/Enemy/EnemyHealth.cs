@@ -74,8 +74,10 @@ public class EnemyHealth : MonoBehaviour
 	
 	public void Die ()
 	{
-		if (this.gameObject.name.Contains ("Regen Warrior")) {
+		if (this.gameObject.name.Contains ("Regen Warrior")) 
+		{
 			Debug.Log("I live!");
+			playerEnergy.IncreaseEnergy(EnergyReward);
 			Health = 5;
 			EnergyReward = 0;
 			ParticleSystem ps = DamageSmokePS.GetComponent<ParticleSystem>();
