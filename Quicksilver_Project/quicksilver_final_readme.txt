@@ -170,7 +170,23 @@ Use standard build settings for Web Player. Ensure all five scenes (quicksilver_
 	- Camera Change: Left/Right Trigger to change viewpoint
 
 - Viewing Requirements:
-Start the game in the main menu.  Proceed to the NEW GAME door in front of character.  This will load the first level which is a tutorial level.  The walls have instructions to new players to demonstrate the basic gameplay of the game.  Reach the end of the stage.  You should have enough energy to proceed to next stage.  If not, restart the level.  Select NEXT LEVEL to proceed to Level 2.
+Start the game in the main menu.  Proceed to the NEW GAME door in front of character.  This will load the first level which is a tutorial level.  
+
+For each level, you will see a variety of enemies and objects.  Here is what they do:
+
+Enemies:
+- Ninja Warrior (white):  Follows simple patrol path.  Chases player if he sees him.  Uses melee attacks to deal damage.  Has low health and low energy reward.  
+- Regen Warrior (green):  Follows patrol network.  Chases player if he sees him.  Uses melee attacks to deal damage.  If killed, he will come back to life after a second and continue chasing the player.  He only gives energy reward after the first kill.  He has comparable health and energy to ninja warrior.  Best to evade after first kill.
+- Ranged Warrior (blue):  Follows patrol above player.  Uses ranged attacks to deal damage to player.  Does severe damage.  Low health, high reward. 
+- Brute Warrior (purple):  Large enemy that patrols.  Uses melee attacks to deal damage to player.  Does severe damage.  High health, high energy reward.
+
+Objects:
+- Crates: These crates are pushable by the player.
+- Glass:  These walls are breakable if you dash through them while moving with a forward velocity.
+- Bombs:  These objects explode if they are shot at by the player or the enemies.  The blast radius will hurt the player or the enemy.  These bombs also go off if the player touches them.
+- Energy Packs:  These are floating batteries.  Touching them will give the player a reasonable boost of energy.
+
+In the first level, the walls have instructions to new players to demonstrate the basic gameplay of the game.  Reach the end of the stage.  You should have enough energy to proceed to next stage.  If not, restart the level.  Select NEXT LEVEL to proceed to Level 2.
 
 In Level 2, there are several enemies and interactable objects.  Explore and try to interact with everything as you try to reach the end of the level.  This level has one of each of the AI.  Try using a variety of slash attacks and shoot attacks to defeat them.  Or use the shield guard or shrink to avoid detection.  Collect batteries in the level for energy boosts.  Navigate to the end with enough energy to beat the stage.  The target energy for this stage is 70.  After winning, proceed to Level 3.
 
